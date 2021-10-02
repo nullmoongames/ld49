@@ -117,6 +117,11 @@ public class PlayerController : MonoBehaviour
         m_rigidbody.AddForce(Vector3.back * obstacleForce * m_rigidbodyMass, ForceMode.Impulse);
     }
 
+    public void ResetPlayerVelocity() 
+    {
+        m_rigidbody.velocity = Vector3.zero;
+    }
+
 
     private void OnTriggerEnter(Collider other)
     {
