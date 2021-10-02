@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using DG.Tweening;
 
 public class GameManager : MonoBehaviour
 {
@@ -18,7 +19,10 @@ public class GameManager : MonoBehaviour
 
     public TMP_Text scoreText;
 
-    public GameObject gameUI;
+    public CanvasGroup gameUI;
+    public CanvasGroup blurMainMenuUI;
+    public CanvasGroup mainMenuUI;
+    public CanvasGroup deathMenuUI;
 
     private void Awake()
     {
@@ -27,6 +31,8 @@ public class GameManager : MonoBehaviour
         _player = FindObjectOfType<PlayerController>().transform;
         _player.gameObject.SetActive(false);
         _playerStartingPos = _player.transform.position;
+
+        _FadeToMainMenu();
     }
 
     private void Update()
@@ -59,7 +65,12 @@ public class GameManager : MonoBehaviour
     public void Play() 
     {
         _player.gameObject.SetActive(true);
-        gameUI.SetActive(true);
+        _FadeToGame();
+    }
+
+    public void DisplayDeathScreen()
+    {
+        _FadeToDeathScreen();
     }
 
     void _SaveHighscore()
@@ -70,5 +81,29 @@ public class GameManager : MonoBehaviour
     void _LoadHighscore() 
     {
 
+    }
+
+    void _FadeToGame() 
+    {
+        gameUI.DOFade(1, .5f);
+        mainMenuUI.DOFade(0, .5f);
+        blurMainMenuUI.DOFade(0, .5f);
+        deathMenuUI.DOFade(0, .5f);
+    }
+
+    void _FadeToMainMenu()
+    {
+        gameUI.DOFade(0, .5f);
+        mainMenuUI.DOFade(1, .5f);
+        blurMainMenuUI.DOFade(1, .5f);
+        deathMenuUI.DOFade(0, .5f);
+    }
+
+    void _FadeToDeathScreen()
+    {
+        gameUI.DOFade(0, .5f);
+        mainMenuUI.DOFade(0, .5f);
+        blurMainMenuUI.DOFade(0, .5f);
+        deathMenuUI.DOFade(1, .5f);
     }
 }
