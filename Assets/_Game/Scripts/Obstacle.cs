@@ -18,9 +18,9 @@ public class Obstacle : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.collider.CompareTag("Player"))
+        if(collision.collider.CompareTag("FrontCheck"))
         {
-            PlayerController player = collision.collider.GetComponent<PlayerController>();
+            PlayerController player = collision.collider.GetComponentInParent<PlayerController>();
 
             player.HitObstacle(m_force);
 

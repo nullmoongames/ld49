@@ -14,6 +14,12 @@ public class PlayerController : MonoBehaviour
     private float m_groundCheckRadius;
     [SerializeField]
     private LayerMask m_groundCheckLayers;
+    [SerializeField]
+    private Transform m_frontCheck;
+    [SerializeField]
+    private float m_frontCheckRadius;
+    [SerializeField]
+    private LayerMask m_frontCheckLayerMask;
 
     [Header("Left/Right movement")]
     [SerializeField]
@@ -25,7 +31,6 @@ public class PlayerController : MonoBehaviour
 
     [Header("Jump")]
     private float m_jumpForce = 500f;
-    [SerializeField]
 
     [Header("Auto run")]
     private float m_maxRunSpeed = 100f;
@@ -64,16 +69,17 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        RaycastHit hitInfo;
         float multiplier = m_isGrounded ? 1f : m_inAirMovementMultiplier;
 
-        if (Physics.SphereCast(m_groundCheck.position, m_groundCheckRadius, Vector3.down, out hitInfo, m_groundCheckLayers))
+        Collider[] colliders = Physics.OverlapSphere(m_groundCheck.position, m_groundCheckRadius, m_groundCheckLayers);
+
+        if (colliders.Length > 0)
         {
-            m_isGrounded = false;
+            m_isGrounded = true;
         }
         else
         {
-            m_isGrounded = true;
+            m_isGrounded = false;
         }
 
         if (Mathf.Abs(m_rigidbody.velocity.x) < m_maxSpeed)
@@ -96,7 +102,6 @@ public class PlayerController : MonoBehaviour
 
     public void HitObstacle(float obstacleForce)
     {
-        Debug.Log($"hitObstacle({obstacleForce})");
         m_rigidbody.AddForce(Vector3.back * obstacleForce * m_rigidbodyMass, ForceMode.Impulse);
     }
 
@@ -106,6 +111,11 @@ public class PlayerController : MonoBehaviour
         Gizmos.color = Color.red;
 
         Gizmos.DrawSphere(m_groundCheck.position, m_groundCheckRadius);
+        Gizmos.DrawSphere(m_frontCheck.position, m_frontCheckRadius);
+        Ray ray = new Ray();
+        ray.origin = m_groundCheck.position;
+        ray.direction = Vector3.down;
+        Gizmos.DrawRay(ray);
     }
     #endregion
 }
