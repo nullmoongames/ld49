@@ -17,7 +17,7 @@ public class GameEventController : MonoBehaviour
     public void DeathEvent()
     {
         GameManager.instance.ReloadLevel();
-        Debug.Log("Death event");
+        Debug.Log("Death.");
         //DEATH UI
         //TITTLE SCREEN
         //PLAY AGAIN
