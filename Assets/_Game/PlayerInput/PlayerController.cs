@@ -108,6 +108,12 @@ public class PlayerController : MonoBehaviour
         m_rigidbody.AddForce(Vector3.back * obstacleForce * m_rigidbodyMass, ForceMode.Impulse);
     }
 
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Death"))
+            GameManager.instance.DeathEvent();
+    }
     #region DEBUG
     private void OnDrawGizmos()
     {
