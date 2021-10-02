@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private float m_maxSpeed = 100f;
     [SerializeField]
+    private float m_inAirMovementMultiplier = .5f;
 
     [Header("Jump")]
     private float m_jumpForce = 500f;
@@ -64,6 +65,7 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         RaycastHit hitInfo;
+        float multiplier = m_isGrounded ? 1f : m_inAirMovementMultiplier;
 
         if (Physics.SphereCast(m_groundCheck.position, m_groundCheckRadius, Vector3.down, out hitInfo, m_groundCheckLayers))
         {
@@ -75,22 +77,20 @@ public class PlayerController : MonoBehaviour
         }
 
         if (Mathf.Abs(m_rigidbody.velocity.x) < m_maxSpeed)
-            m_rigidbody.AddForce(transform.right * m_moveAcceleration * m_rigidbodyMass * m_inputX * Time.fixedDeltaTime, ForceMode.Acceleration);
+            m_rigidbody.AddForce(transform.right * m_moveAcceleration * m_rigidbodyMass * m_inputX * multiplier * Time.fixedDeltaTime, ForceMode.Acceleration);
 
         if (m_rigidbody.velocity.z < m_maxRunSpeed)
         {
             // Apply constant force backwards for auto running
             m_rigidbody.AddForce(Vector3.forward * m_runAcceleration * m_rigidbodyMass, ForceMode.Acceleration);
         }
-
-        Debug.Log(m_rigidbody.velocity.z);
     }
 
     private void Jump()
     {
         if (m_isGrounded)
         {
-            m_rigidbody.AddForce(transform.up * m_jumpForce * m_rigidbodyMass, ForceMode.Impulse);
+            m_rigidbody.AddForce(transform.up * m_jumpForce / m_rigidbodyMass, ForceMode.Impulse);
         }
     }
 
