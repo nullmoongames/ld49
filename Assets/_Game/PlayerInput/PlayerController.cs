@@ -33,6 +33,7 @@ public class PlayerController : MonoBehaviour
     private float m_jumpForce = 500f;
 
     [Header("Auto run")]
+    [SerializeField]
     private float m_maxRunSpeed = 100f;
     [SerializeField]
     private float m_runAcceleration = 5f;
@@ -90,6 +91,8 @@ public class PlayerController : MonoBehaviour
             // Apply constant force backwards for auto running
             m_rigidbody.AddForce(Vector3.forward * m_runAcceleration, ForceMode.Acceleration);
         }
+
+        Debug.Log($"Grounded: {m_isGrounded}");
     }
 
     private void Jump()
