@@ -117,11 +117,19 @@ public class PlayerController : MonoBehaviour
         m_rigidbody.AddForce(Vector3.back * obstacleForce * m_rigidbodyMass, ForceMode.Impulse);
     }
 
+    public void ResetPlayerVelocity() 
+    {
+        m_rigidbody.velocity = Vector3.zero;
+    }
+
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Death"))
-            GameManager.instance.DeathEvent();
+        if (other.gameObject.layer == LayerMask.NameToLayer("Death"))
+            GameEventController.instance.DeathEvent();
+
+        if (other.gameObject.layer == LayerMask.NameToLayer("Boat"))
+            GameEventController.instance.NewEntryBoat(other.transform.parent);
     }
     #region DEBUG
     private void OnDrawGizmos()
