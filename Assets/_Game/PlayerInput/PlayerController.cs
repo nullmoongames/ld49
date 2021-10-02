@@ -120,10 +120,10 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Death"))
+        if (other.gameObject.layer == LayerMask.NameToLayer("Death"))
             GameEventController.instance.DeathEvent();
 
-        if (other.gameObject.CompareTag("Boat"))
+        if (other.gameObject.layer == LayerMask.NameToLayer("Boat"))
             GameEventController.instance.NewEntryBoat(other.transform.parent);
     }
     #region DEBUG
