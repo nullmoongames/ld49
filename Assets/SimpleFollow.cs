@@ -8,15 +8,23 @@ public class SimpleFollow : MonoBehaviour
     public bool x;
     public bool y, z;
 
-    //[Header("Followed ")]
-    void Start()
-    {
-        
-    }
+    [Header("Followed Object")]
+    public Transform target;
+
+    private Vector3 _newPos;
 
     void Update()
-    {
-        //if(x)
+    { 
+        if (x)
+            _newPos.x = target.transform.position.x;
+
+        if (y)
+            _newPos.y = target.transform.position.y;
+
+        if (z)
+            _newPos.z = target.transform.position.z;
+
+        transform.position = _newPos;
 
     }
 }
