@@ -16,7 +16,7 @@ public class GameEventController : MonoBehaviour
         instance = this;
         Crest.BoatProbes _crestBoat = FindObjectOfType<Crest.BoatProbes>();
 
-        if (_actualBoat != null)
+        if (_crestBoat != null)
         {
             _actualBoat = _crestBoat.transform;
             _startingBoat = _actualBoat;

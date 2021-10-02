@@ -69,6 +69,7 @@ public class GameManager : MonoBehaviour
     {
         _player.gameObject.SetActive(true);
         _FadeToGame();
+        _gameIsPlaying = true;
     }
 
     public void DisplayDeathScreen()
