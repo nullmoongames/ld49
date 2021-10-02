@@ -271,9 +271,11 @@ MonoBehaviour:
   m_frontCheckLayerMask:
     serializedVersion: 2
     m_Bits: 0
-  m_moveAcceleration: 80
+  m_moveAcceleration: 1000
   m_maxSpeed: 100
   m_inAirMovementMultiplier: 0.5
+  m_jumpForce: 500
+  m_gravity: 9.81
   m_maxRunSpeed: 55
   m_runAcceleration: 12
 --- !u!136 &587582804916648624

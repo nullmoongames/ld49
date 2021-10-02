@@ -30,7 +30,10 @@ public class PlayerController : MonoBehaviour
     private float m_inAirMovementMultiplier = .5f;
 
     [Header("Jump")]
+    [SerializeField]
     private float m_jumpForce = 500f;
+    [SerializeField]
+    private float m_gravity = 9.81f;
 
     [Header("Auto run")]
     [SerializeField]
@@ -71,6 +74,7 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         float multiplier = m_isGrounded ? 1f : m_inAirMovementMultiplier;
+        Vector3 velocity = m_rigidbody.velocity;
 
         Collider[] colliders = Physics.OverlapSphere(m_groundCheck.position, m_groundCheckRadius, m_groundCheckLayers);
 
@@ -92,7 +96,12 @@ public class PlayerController : MonoBehaviour
             m_rigidbody.AddForce(Vector3.forward * m_runAcceleration, ForceMode.Acceleration);
         }
 
-        Debug.Log($"Grounded: {m_isGrounded}");
+        // Apply gravity
+        if(!m_isGrounded)
+        {
+            velocity.y -= m_gravity;
+            m_rigidbody.velocity = velocity;
+        }
     }
 
     private void Jump()
