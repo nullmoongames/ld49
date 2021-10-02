@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Crest;
 
 public class LevelGenerationManager : MonoBehaviour
 {
@@ -12,16 +13,16 @@ public class LevelGenerationManager : MonoBehaviour
     public float passedBoatDestroyedDistance;
 
     [Space(20)]
-    [Range(0, 5)] public float forwardMinDistBetweenBoats;
-    [Range(0, 5)] public float forwardMaxDistBetweenBoats;
-    [Range(-3, 3)] public float sideMinDistBetweenBoats, sideMaxDistBetweenBoats;
+    [UnityEngine.Range(0, 100)] public float forwardMinDistBetweenBoats;
+    [UnityEngine.Range(0, 100)] public float forwardMaxDistBetweenBoats;
+    [UnityEngine.Range(-30, 30)] public float sideMinDistBetweenBoats, sideMaxDistBetweenBoats;
 
 
     private Transform _lastGeneratedBoat;
 
     void Awake()
     {
-        _lastGeneratedBoat = FindObjectOfType<BoatOnOcean>().transform;
+        _lastGeneratedBoat = FindObjectOfType<BoatProbes>().transform;
 
         _NewGeneration();
     }
