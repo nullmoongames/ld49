@@ -127,6 +127,7 @@ MonoBehaviour:
   x: 1
   y: 0
   z: 1
+  offset: {x: 0, y: 0, z: 0}
   target: {fileID: 587582804916648653}
 --- !u!1 &1415925625
 GameObject:
@@ -493,6 +494,7 @@ MonoBehaviour:
   m_frontCheckLayerMask:
     serializedVersion: 2
     m_Bits: 0
+  m_animator: {fileID: 0}
   m_moveAcceleration: 1000
   m_maxSpeed: 100
   m_inAirMovementMultiplier: 0.5
