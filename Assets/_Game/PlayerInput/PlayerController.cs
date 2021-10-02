@@ -20,6 +20,8 @@ public class PlayerController : MonoBehaviour
     private float m_frontCheckRadius;
     [SerializeField]
     private LayerMask m_frontCheckLayerMask;
+    [SerializeField]
+    Animator m_animator;
 
     [Header("Left/Right movement")]
     [SerializeField]
@@ -69,6 +71,7 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         m_inputX = m_inputActions.Gameplay.Move.ReadValue<Vector2>().x;
+        UpdateAnimator();
     }
 
     private void FixedUpdate()
@@ -104,6 +107,15 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.layer == LayerMask.NameToLayer("Death"))
+            GameEventController.instance.DeathEvent();
+
+        if (other.gameObject.layer == LayerMask.NameToLayer("Boat"))
+            GameEventController.instance.NewEntryBoat(other.transform.parent);
+    }
+
     private void Jump()
     {
         if (m_isGrounded)
@@ -122,14 +134,10 @@ public class PlayerController : MonoBehaviour
         m_rigidbody.velocity = Vector3.zero;
     }
 
-
-    private void OnTriggerEnter(Collider other)
+    private void UpdateAnimator()
     {
-        if (other.gameObject.layer == LayerMask.NameToLayer("Death"))
-            GameEventController.instance.DeathEvent();
-
-        if (other.gameObject.layer == LayerMask.NameToLayer("Boat"))
-            GameEventController.instance.NewEntryBoat(other.transform.parent);
+        m_animator.SetFloat("VelocityY", m_rigidbody.velocity.y);
+        m_animator.SetBool("Grounded", m_isGrounded);
     }
     #region DEBUG
     private void OnDrawGizmos()
