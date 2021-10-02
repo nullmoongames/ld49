@@ -5,10 +5,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField]
-    private float m_speed = 10f;
-    [SerializeField]
-    private float m_maxSpeed = 100f;
+    [Header("References")]
     [SerializeField]
     private Rigidbody m_rigidbody;
     [SerializeField]
@@ -17,14 +14,29 @@ public class PlayerController : MonoBehaviour
     private float m_groundCheckRadius;
     [SerializeField]
     private LayerMask m_groundCheckLayers;
+
+    [Header("Left/Right movement")]
     [SerializeField]
+    private float m_moveAcceleration = 100f;
+    [SerializeField]
+    private float m_maxSpeed = 100f;
+    [SerializeField]
+
+    [Header("Jump")]
     private float m_jumpForce = 500f;
+    [SerializeField]
+
+    [Header("Auto run")]
+    private float m_maxRunSpeed = 100f;
+    [SerializeField]
+    private float m_runAcceleration = 5f;
 
     [HideInInspector]
     public PlayerInputActions m_inputActions;
 
     private float m_inputX;
     private bool m_isGrounded;
+    private float m_rigidbodyMass;
 
     private void Awake()
     {
@@ -36,6 +48,7 @@ public class PlayerController : MonoBehaviour
         m_inputActions.Enable();
 
         m_inputActions.Gameplay.Jump.started += ctx => Jump();
+        m_rigidbodyMass = m_rigidbody.mass;
     }
 
     private void OnDisable()
@@ -61,14 +74,22 @@ public class PlayerController : MonoBehaviour
         }
 
         if (Mathf.Abs(m_rigidbody.velocity.x) < m_maxSpeed)
-            m_rigidbody.AddForce(transform.right * m_speed * m_inputX * Time.fixedDeltaTime, ForceMode.Acceleration);
+            m_rigidbody.AddForce(transform.right * m_moveAcceleration * m_rigidbodyMass * m_inputX * Time.fixedDeltaTime, ForceMode.Acceleration);
+
+        if(m_rigidbody.velocity.z < m_maxRunSpeed)
+        {
+            // Apply constant force backwards for auto running
+            m_rigidbody.AddForce(Vector3.forward * m_runAcceleration, ForceMode.Acceleration);
+        }
+
+        Debug.Log(m_rigidbody.velocity.z);
     }
 
     private void Jump()
     {
         if(m_isGrounded)
         {
-            m_rigidbody.AddForce(transform.up * m_jumpForce, ForceMode.Impulse);
+            m_rigidbody.AddForce(transform.up * m_jumpForce * m_rigidbodyMass, ForceMode.Impulse);
         }
     }
 
