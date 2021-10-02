@@ -23,7 +23,7 @@ public class LevelGenerationManager : MonoBehaviour
 
     public static LevelGenerationManager instance;
 
-    void Awake()
+    void Start()
     {
         instance = this;
 
@@ -58,12 +58,17 @@ public class LevelGenerationManager : MonoBehaviour
 
     public void DestroyBoats() 
     {
+        for(int i = 0; i < generatedBoats.Count; i++) 
+        {
+            Destroy(generatedBoats[i]);
+        }
+
         generatedBoats.Clear();
     }
 
     public void StartLevelGeneration() 
     {
-        _lastGeneratedBoat = FindObjectOfType<BoatProbes>().transform;
+        _lastGeneratedBoat = GameEventController.instance.GetStartingBoat();
 
         _NewGeneration();
     }
