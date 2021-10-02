@@ -121,7 +121,10 @@ public class PlayerController : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Death"))
-            GameManager.instance.DeathEvent();
+            GameEventController.instance.DeathEvent();
+
+        if (other.gameObject.CompareTag("Boat"))
+            GameEventController.instance.NewEntryBoat(other.transform.parent);
     }
     #region DEBUG
     private void OnDrawGizmos()

@@ -7,6 +7,7 @@ public class LevelGenerationManager : MonoBehaviour
 {
     [Header("Boat")]
     public GameObject[] boats;
+    private List<GameObject> generatedBoats = new List<GameObject>();
 
     [Header("Generation Parameters"), Space(10)]
     public int generatedBoatCountEachCycle;
@@ -20,16 +21,13 @@ public class LevelGenerationManager : MonoBehaviour
 
     private Transform _lastGeneratedBoat;
 
+    public static LevelGenerationManager instance;
+
     void Awake()
     {
-        _lastGeneratedBoat = FindObjectOfType<BoatProbes>().transform;
+        instance = this;
 
-        _NewGeneration();
-    }
-
-    void Update()
-    {
-        
+        StartLevelGeneration();
     }
 
     void _NewGeneration()
@@ -37,6 +35,7 @@ public class LevelGenerationManager : MonoBehaviour
         for(int i = 0; i < generatedBoatCountEachCycle; i++)
         {
             GameObject boat = Instantiate(_GetRandomBoat(), _GetInstiantiationPosition(_lastGeneratedBoat.GetChild(0).position), Quaternion.identity);
+            generatedBoats.Add(boat);
             _lastGeneratedBoat = boat.transform;
         }
     }
@@ -55,5 +54,17 @@ public class LevelGenerationManager : MonoBehaviour
         __lastGeneratedBoatEndPoint.x = Random.Range(sideMinDistBetweenBoats, sideMaxDistBetweenBoats);
 
         return __lastGeneratedBoatEndPoint;
+    }
+
+    public void DestroyBoats() 
+    {
+        generatedBoats.Clear();
+    }
+
+    public void StartLevelGeneration() 
+    {
+        _lastGeneratedBoat = FindObjectOfType<BoatProbes>().transform;
+
+        _NewGeneration();
     }
 }
