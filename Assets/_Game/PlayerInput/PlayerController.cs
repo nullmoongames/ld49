@@ -82,7 +82,7 @@ public class PlayerController : MonoBehaviour
         if (m_rigidbody.velocity.z < m_maxRunSpeed)
         {
             // Apply constant force backwards for auto running
-            m_rigidbody.AddForce(Vector3.forward * m_runAcceleration * m_rigidbodyMass, ForceMode.Acceleration);
+            m_rigidbody.AddForce(Vector3.forward * m_runAcceleration, ForceMode.Acceleration);
         }
     }
 
@@ -92,6 +92,12 @@ public class PlayerController : MonoBehaviour
         {
             m_rigidbody.AddForce(transform.up * m_jumpForce / m_rigidbodyMass, ForceMode.Impulse);
         }
+    }
+
+    public void HitObstacle(float obstacleForce)
+    {
+        Debug.Log($"hitObstacle({obstacleForce})");
+        m_rigidbody.AddForce(Vector3.back * obstacleForce * m_rigidbodyMass, ForceMode.Impulse);
     }
 
     #region DEBUG
