@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
+using UnityEngine.VFX;
 
 public class PlayerController : MonoBehaviour
 {
@@ -43,6 +45,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private float m_runAcceleration = 5f;
 
+    [Header("VFX")]
+    [SerializeField]
+    private VisualEffect m_speedVFX;
+
     [HideInInspector]
     public PlayerInputActions m_inputActions;
 
@@ -61,6 +67,8 @@ public class PlayerController : MonoBehaviour
 
         m_inputActions.Gameplay.Jump.started += ctx => Jump();
         m_rigidbodyMass = m_rigidbody.mass;
+
+        m_speedVFX.Stop();
     }
 
     private void OnDisable()
@@ -77,6 +85,7 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         float multiplier = m_isGrounded ? 1f : m_inAirMovementMultiplier;
+        float forwardMultiplier = 1f;
         Vector3 velocity = m_rigidbody.velocity;
 
         Collider[] colliders = Physics.OverlapSphere(m_groundCheck.position, m_groundCheckRadius, m_groundCheckLayers);
@@ -84,6 +93,21 @@ public class PlayerController : MonoBehaviour
         if (colliders.Length > 0)
         {
             m_isGrounded = true;
+
+            foreach(Collider collider in colliders)
+            {
+                if (collider.CompareTag("SpeedBoost"))
+                {
+                    forwardMultiplier = 10f;
+                    if(m_speedVFX.aliveParticleCount < 1)
+                        m_speedVFX.Play();
+                    m_speedVFX.playRate = 3f;
+                }
+                else
+                {
+                    m_speedVFX.Stop();
+                }
+            }
         }
         else
         {
@@ -96,7 +120,7 @@ public class PlayerController : MonoBehaviour
         if (m_rigidbody.velocity.z < m_maxRunSpeed)
         {
             // Apply constant force backwards for auto running
-            m_rigidbody.AddForce(Vector3.forward * m_runAcceleration, ForceMode.Acceleration);
+            m_rigidbody.AddForce(Vector3.forward * m_runAcceleration * forwardMultiplier, ForceMode.Force);
         }
 
         // Apply gravity
@@ -110,6 +134,11 @@ public class PlayerController : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.layer == LayerMask.NameToLayer("Death"))
+            if(LevelGenerationManager.instance == null)
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+                return;
+            }
             GameEventController.instance.DeathEvent();
 
         if (other.gameObject.layer == LayerMask.NameToLayer("Boat"))
