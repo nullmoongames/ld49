@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 972904889114813596}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Hull
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48,7 +48,7 @@ GameObject:
   - component: {fileID: 972904889276322314}
   - component: {fileID: 7929935731750656702}
   - component: {fileID: 5040472802354705110}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Boat 03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -146,7 +146,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 972904889365731362}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: EndPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -178,7 +178,7 @@ GameObject:
   - component: {fileID: 972904889443575103}
   - component: {fileID: 972904889443575101}
   - component: {fileID: 972904889443575102}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -259,7 +259,7 @@ GameObject:
   - component: {fileID: 972904889806097063}
   - component: {fileID: 972904889806097061}
   - component: {fileID: 972904889806097062}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -340,7 +340,7 @@ GameObject:
   - component: {fileID: 972904889905252030}
   - component: {fileID: 972904889905252028}
   - component: {fileID: 972904889905252029}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -423,7 +423,7 @@ GameObject:
   - component: {fileID: 972904890194405214}
   - component: {fileID: 972904890194405215}
   - component: {fileID: 972904890194405216}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: WaterObjectInteractionSphereFront
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -537,7 +537,7 @@ GameObject:
   - component: {fileID: 972904890350690305}
   - component: {fileID: 972904890350690306}
   - component: {fileID: 972904890350690307}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -630,7 +630,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 972904890407463557}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BoatProbes 03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -666,7 +666,7 @@ GameObject:
   - component: {fileID: 972904890538466307}
   - component: {fileID: 972904890538466305}
   - component: {fileID: 972904890538466306}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cylinder (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -747,7 +747,7 @@ GameObject:
   - component: {fileID: 972904890637524301}
   - component: {fileID: 972904890637524299}
   - component: {fileID: 972904890637524300}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -830,7 +830,7 @@ GameObject:
   - component: {fileID: 972904890722913689}
   - component: {fileID: 972904890722913690}
   - component: {fileID: 972904890722913691}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: WaterObjectInteractionSphereBack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -943,7 +943,7 @@ GameObject:
   - component: {fileID: 972904890932898081}
   - component: {fileID: 972904890932898079}
   - component: {fileID: 972904890932898080}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1022,7 +1022,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 972904890948372187}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CameraPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
