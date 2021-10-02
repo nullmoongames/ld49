@@ -23,7 +23,7 @@ public class LevelGenerationManager : MonoBehaviour
 
     public static LevelGenerationManager instance;
 
-    void Awake()
+    void Start()
     {
         instance = this;
 

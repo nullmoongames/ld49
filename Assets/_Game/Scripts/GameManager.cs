@@ -37,6 +37,7 @@ public class GameManager : MonoBehaviour
         LevelGenerationManager.instance.StartLevelGeneration();
         _player.transform.position = _playerStartingPos;
         distanceCover = 0;
+        //Reset water
     }
 
     void _UpdatePlayerMeters() 
