@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using DG.Tweening;
+using Cinemachine;
 
 public class GameManager : MonoBehaviour
 {
@@ -23,6 +24,8 @@ public class GameManager : MonoBehaviour
     public CanvasGroup blurMainMenuUI;
     public CanvasGroup mainMenuUI;
     public CanvasGroup deathMenuUI;
+
+    public CinemachineVirtualCamera mainMenuCam;
 
     private void Awake()
     {
@@ -85,10 +88,12 @@ public class GameManager : MonoBehaviour
 
     void _FadeToGame() 
     {
+        mainMenuCam.Priority = 0;
         gameUI.DOFade(1, .5f);
         mainMenuUI.DOFade(0, .5f);
         blurMainMenuUI.DOFade(0, .5f);
         deathMenuUI.DOFade(0, .5f);
+
     }
 
     void _FadeToMainMenu()
@@ -97,6 +102,7 @@ public class GameManager : MonoBehaviour
         mainMenuUI.DOFade(1, .5f);
         blurMainMenuUI.DOFade(1, .5f);
         deathMenuUI.DOFade(0, .5f);
+        mainMenuCam.Priority = 3;
     }
 
     void _FadeToDeathScreen()
@@ -105,5 +111,6 @@ public class GameManager : MonoBehaviour
         mainMenuUI.DOFade(0, .5f);
         blurMainMenuUI.DOFade(0, .5f);
         deathMenuUI.DOFade(1, .5f);
+        mainMenuCam.Priority = 0;
     }
 }
