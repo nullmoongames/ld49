@@ -25,6 +25,5 @@ public class SimpleFollow : MonoBehaviour
             _newPos.z = target.transform.position.z;
 
         transform.position = _newPos;
-
     }
 }
