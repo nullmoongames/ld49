@@ -14,8 +14,13 @@ public class GameEventController : MonoBehaviour
     private void Awake()
     {
         instance = this;
-        _actualBoat = FindObjectOfType<Crest.BoatProbes>().transform;
-        _startingBoat = _actualBoat;
+        Crest.BoatProbes _crestBoat = FindObjectOfType<Crest.BoatProbes>();
+
+        if (_actualBoat != null)
+        {
+            _actualBoat = _crestBoat.transform;
+            _startingBoat = _actualBoat;
+        }
     }
     public void DeathEvent()
     {

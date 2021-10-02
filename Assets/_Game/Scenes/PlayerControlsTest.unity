@@ -1103,7 +1103,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 354051865}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 157.75}
+  m_LocalPosition: {x: 0, y: 0, z: 21.51}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -5267,6 +5267,50 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1163780418
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1163780419}
+  - component: {fileID: 1163780420}
+  m_Layer: 0
+  m_Name: GameEventController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1163780419
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1163780418}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1163780420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1163780418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 715fd9fb68809834fa363d857b698704, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeBeforeBoatPassedDestruction: 3
 --- !u!1 &1402049527
 GameObject:
   m_ObjectHideFlags: 0
@@ -5345,7 +5389,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1402049527}
-  m_LocalRotation: {x: 0.016243594, y: 0.000000017237685, z: -2.8003888e-10, w: 0.9998681}
+  m_LocalRotation: {x: 0.016243573, y: -0.000000017237685, z: 2.8003855e-10, w: 0.9998681}
   m_LocalPosition: {x: 7.92, y: 13.5, z: -16}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -6496,11 +6540,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 755292273, guid: 579eb038e3d675a468fa6ac37a997488, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.0000000021481275
+      value: 0.000000002148128
       objectReference: {fileID: 0}
     - target: {fileID: 755292273, guid: 579eb038e3d675a468fa6ac37a997488, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -1.0713917e-10
+      value: 1.071392e-10
       objectReference: {fileID: 0}
     - target: {fileID: 170304020887336136, guid: 579eb038e3d675a468fa6ac37a997488, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -6540,15 +6584,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 587582804870471015, guid: 579eb038e3d675a468fa6ac37a997488, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.016243594
+      value: 0.016243573
       objectReference: {fileID: 0}
     - target: {fileID: 587582804870471015, guid: 579eb038e3d675a468fa6ac37a997488, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000000017237685
+      value: -0.000000017237685
       objectReference: {fileID: 0}
     - target: {fileID: 587582804870471015, guid: 579eb038e3d675a468fa6ac37a997488, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -2.8003888e-10
+      value: 2.8003855e-10
       objectReference: {fileID: 0}
     - target: {fileID: 587582804916648652, guid: 579eb038e3d675a468fa6ac37a997488, type: 3}
       propertyPath: m_animator
@@ -7132,6 +7176,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 9020299557876532400, guid: 7c06c8c92bff070408902525cec23363, type: 3}
+      propertyPath: m_Size.z
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 9020299557876532401, guid: 7c06c8c92bff070408902525cec23363, type: 3}
       propertyPath: m_Name
       value: DeathFire
