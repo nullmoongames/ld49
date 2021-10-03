@@ -1849,7 +1849,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 2fed48310b80a1348842528bf63860f2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1957,7 +1957,6 @@ GameObject:
   - component: {fileID: 906092466854644961}
   - component: {fileID: 76428626486221245}
   - component: {fileID: 5512237967151820845}
-  - component: {fileID: -4818328955643208550}
   m_Layer: 0
   m_Name: Boat 02
   m_TagString: Untagged
@@ -2147,20 +2146,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30e236c6305d4d846bac7339a7087d75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &-4818328955643208550
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3875562275760079671}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0574624e5b203b940b8ff8cc95de8d12, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _debugDraw: 0
-  _offset: 25
 --- !u!1 &3999540043819010938
 GameObject:
   m_ObjectHideFlags: 0
