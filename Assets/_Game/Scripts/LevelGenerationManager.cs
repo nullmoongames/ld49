@@ -17,6 +17,7 @@ public class LevelGenerationManager : MonoBehaviour
     [UnityEngine.Range(0, 100)] public float forwardMinDistBetweenBoats;
     [UnityEngine.Range(0, 100)] public float forwardMaxDistBetweenBoats;
     [UnityEngine.Range(-30, 30)] public float sideMinDistBetweenBoats, sideMaxDistBetweenBoats;
+    [UnityEngine.Range(-30, 30)] public float upMinDistBetweenBoats, upMaxDistBetweenBoats;
 
 
     private Transform _lastGeneratedBoat;
@@ -71,6 +72,9 @@ public class LevelGenerationManager : MonoBehaviour
 
         //Side
         __lastGeneratedBoatEndPoint.x = Random.Range(sideMinDistBetweenBoats, sideMaxDistBetweenBoats);
+
+        //Up
+        __lastGeneratedBoatEndPoint.y = Random.Range(upMinDistBetweenBoats, upMaxDistBetweenBoats);
 
         return __lastGeneratedBoatEndPoint;
     }
