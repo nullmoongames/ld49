@@ -50225,7 +50225,7 @@ AnimationClip:
     messageOptions: 0
   - time: 0.48
     functionName: Footstep
-    data: right
+    data: left
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0

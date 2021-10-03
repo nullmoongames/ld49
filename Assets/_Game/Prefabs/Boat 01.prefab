@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: 1781641330287030779}
   m_Layer: 0
   m_Name: MESH_Mat003
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -173,9 +173,9 @@ GameObject:
   - component: {fileID: 1171544763404228895}
   - component: {fileID: 3791942541763253725}
   - component: {fileID: 433029211794850758}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: MESH_Mat002
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1283,7 +1283,7 @@ GameObject:
   - component: {fileID: 6221709464174388883}
   m_Layer: 0
   m_Name: MESH_Mat004
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

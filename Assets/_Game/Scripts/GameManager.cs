@@ -19,7 +19,15 @@ public class GameManager : MonoBehaviour
     public CanvasGroup gameUI;
     public CanvasGroup mainMenuUI;
     public CanvasGroup deathMenuUI;
+    public GameObject mainMenuGameObject;
+    public GameObject creditsMenuGameObject;
     public CinemachineVirtualCamera mainMenuCam;
+    AudioSource audioSource;
+
+    [Header("Intro")]
+    public CinemachineVirtualCamera IntroVCam1;
+    public CinemachineVirtualCamera IntroVCam2;
+    public GameObject pirateRunnerIntro;
 
     [Header("Chaos")]
     public float chaosPercent;
@@ -36,7 +44,7 @@ public class GameManager : MonoBehaviour
     //Reload Management
     private Transform _player;
     private Vector3 _playerStartingPos;
-    private bool _gameIsPlaying;
+    public bool _gameIsPlaying;
     public Transform fire;
     private Vector3 _startFirePos;
 
@@ -58,6 +66,8 @@ public class GameManager : MonoBehaviour
         _startingZPos = _player.transform.position.z;
         _player.gameObject.SetActive(false);
         _playerStartingPos = _player.transform.position;
+
+        audioSource = GetComponent<AudioSource>();
 
         _FadeToMainMenu();
         scoreText.text = "<b>" + 0 + "</b>m";
@@ -117,15 +127,54 @@ public class GameManager : MonoBehaviour
 
     public void Play() 
     {
-        _player.gameObject.SetActive(true);
+        PlayIntro1();
         _FadeToGame();
-        _gameIsPlaying = true;
         GameplayMusic.Instance.SwitchToGameplayMusic();
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+    }
+
+    void PlayIntro1()
+    {
+        IntroVCam1.Priority = 10;
+        Invoke("PlayIntro2", 4f);
+    }
+
+    void PlayIntro2()
+    {
+        pirateRunnerIntro.SetActive(true);
+        IntroVCam1.Priority = 0;
+        IntroVCam2.Priority = 10;
+        Invoke("DoPlay", 4f);
+    }
+
+    void DoPlay()
+    {
+        IntroVCam2.Priority = 0;
+        pirateRunnerIntro.SetActive(false);
+        _player.gameObject.SetActive(true);
+        _gameIsPlaying = true;
     }
 
     public void DisplayDeathScreen()
     {
         _FadeToDeathScreen();
+    }
+
+    public void DisplayCredits(bool display)
+    {
+        creditsMenuGameObject.SetActive(display);
+        mainMenuGameObject.SetActive(!display);
+    }
+
+    public void PlayBellSound()
+    {
+        audioSource.Play();
+    }
+
+    public void ExitGame()
+    {
+        Application.Quit();
     }
 
     public void SaveHighscore()

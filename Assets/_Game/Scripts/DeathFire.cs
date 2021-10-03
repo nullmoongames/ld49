@@ -11,6 +11,8 @@ public class DeathFire : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!GameManager.instance._gameIsPlaying) return;
+
         float step = m_speed * Time.deltaTime;
 
         Vector3 position = transform.position;
