@@ -13,11 +13,21 @@ public class SimpleFollow : MonoBehaviour
 
     [Header("Followed Object")]
     public Transform target;
+    public bool forceStartingPosSet;
 
     private Vector3 _newPos;
+    private Vector3 _startingPos;
+
+    private void Awake()
+    {
+        _startingPos = transform.position;
+    }
 
     void Update()
     {
+        //if(forceStartingPosSet)
+
+
         _newPos = transform.position;
 
         if (x)

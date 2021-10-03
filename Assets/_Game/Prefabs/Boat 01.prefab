@@ -914,38 +914,76 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9dce546b125fc343a8d88884825486f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boatProps: []
+  boatProps:
+  - propVariant:
+    - {fileID: 7302162258992824483, guid: ae74aa401dc4ff344b09cdb0c61fac05, type: 3}
+    attachedToParent: 0
+    minimumChaosRequiredToSpawn: 33
+    maximumChaosRequiredToSpawn: 100
+  - propVariant:
+    - {fileID: 90060630273602444, guid: 8292c4b8d826dda4c86e3a2c1168907a, type: 3}
+    attachedToParent: 0
+    minimumChaosRequiredToSpawn: 0
+    maximumChaosRequiredToSpawn: 100
+  - propVariant:
+    - {fileID: 1052475958741873088, guid: 139574fae2dd72546b5e762f1959b989, type: 3}
+    attachedToParent: 0
+    minimumChaosRequiredToSpawn: 0
+    maximumChaosRequiredToSpawn: 100
+  - propVariant:
+    - {fileID: 2383336009937409156, guid: fbd0809a74fbaa840b43e606682ea083, type: 3}
+    attachedToParent: 0
+    minimumChaosRequiredToSpawn: 0
+    maximumChaosRequiredToSpawn: 100
+  - propVariant:
+    - {fileID: 1440033832554409499, guid: 7c9b9ae83602caf449fcdc861c0ea867, type: 3}
+    attachedToParent: 0
+    minimumChaosRequiredToSpawn: 20
+    maximumChaosRequiredToSpawn: 100
+  - propVariant:
+    - {fileID: 5533675669795933104, guid: 83415595f20662b48b12f050a81b5955, type: 3}
+    attachedToParent: 1
+    minimumChaosRequiredToSpawn: 0
+    maximumChaosRequiredToSpawn: 100
   oceanProps:
   - propVariant:
     - {fileID: 8562865382295276885, guid: 4e800e40b6154214990013cdffc43d93, type: 3}
+    attachedToParent: 0
     minimumChaosRequiredToSpawn: 0
     maximumChaosRequiredToSpawn: 100
   - propVariant:
     - {fileID: 100000, guid: 5971121cce08fdb4295a43dd39a7382c, type: 3}
+    attachedToParent: 0
     minimumChaosRequiredToSpawn: 0
     maximumChaosRequiredToSpawn: 33
   - propVariant:
     - {fileID: 100000, guid: 910f0349684df5c42bf84bda0f818070, type: 3}
+    attachedToParent: 0
     minimumChaosRequiredToSpawn: 33
     maximumChaosRequiredToSpawn: 66
   - propVariant:
     - {fileID: 100000, guid: 39ce30802aeb48842bf1a864743bfe10, type: 3}
+    attachedToParent: 0
     minimumChaosRequiredToSpawn: 66
     maximumChaosRequiredToSpawn: 100
   - propVariant:
     - {fileID: 100002, guid: 213c3312568623e47903adc329c8115c, type: 3}
+    attachedToParent: 0
     minimumChaosRequiredToSpawn: 33
     maximumChaosRequiredToSpawn: 100
   - propVariant:
     - {fileID: 100000, guid: 91730bb842ef31b41b8228d5a2eee0cd, type: 3}
+    attachedToParent: 0
     minimumChaosRequiredToSpawn: 0
     maximumChaosRequiredToSpawn: 100
   - propVariant:
     - {fileID: 100000, guid: c63c77daacd0013499e2cf8f9c39edbc, type: 3}
+    attachedToParent: 1
     minimumChaosRequiredToSpawn: 0
     maximumChaosRequiredToSpawn: 66
   - propVariant:
     - {fileID: 100000, guid: e169bd13f37509046ae97d918a0a22fe, type: 3}
+    attachedToParent: 1
     minimumChaosRequiredToSpawn: 50
     maximumChaosRequiredToSpawn: 100
   boatPropSpawnPoints:
