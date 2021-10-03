@@ -147,14 +147,15 @@ public class PlayerController : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.layer == LayerMask.NameToLayer("Death"))
-            if(LevelGenerationManager.instance == null)
+        {
+            if (LevelGenerationManager.instance == null)
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
                 return;
             }
             GameEventController.instance.DeathEvent();
-
-        if (other.gameObject.layer == LayerMask.NameToLayer("Boat"))
+        }
+        else if (other.gameObject.layer == LayerMask.NameToLayer("Boat"))
             GameEventController.instance.NewEntryBoat(other.transform.parent);
     }
 
