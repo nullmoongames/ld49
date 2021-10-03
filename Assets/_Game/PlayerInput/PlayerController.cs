@@ -55,6 +55,8 @@ public class PlayerController : MonoBehaviour
     private AudioSource m_speedBoostAudioSource;
     [SerializeField]
     private AudioSource m_ImpactAudioSource;
+    [SerializeField]
+    private AudioSource m_ouchAudioSource;
 
     [HideInInspector]
     public PlayerInputActions m_inputActions;
@@ -63,6 +65,7 @@ public class PlayerController : MonoBehaviour
     private bool m_isGrounded;
     private float m_rigidbodyMass;
     private float forwardMultiplier = 1f;
+    private float m_ouchTimer;
 
     private void Awake()
     {
@@ -88,6 +91,11 @@ public class PlayerController : MonoBehaviour
     {
         m_inputX = m_inputActions.Gameplay.Move.ReadValue<Vector2>().x;
         UpdateAnimator();
+
+        if(m_ouchTimer > 0)
+        {
+            m_ouchTimer -= Time.deltaTime;
+        }
     }
 
     private void FixedUpdate()
@@ -159,6 +167,7 @@ public class PlayerController : MonoBehaviour
 
             m_cinemachineImpulseSource.GenerateImpulse(Vector3.one);
 
+            m_ouchAudioSource.Play();
             m_ImpactAudioSource.pitch = Random.Range(1f, 1.5f);
             m_ImpactAudioSource.Play();
         }
