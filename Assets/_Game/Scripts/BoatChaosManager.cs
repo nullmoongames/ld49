@@ -39,10 +39,16 @@ public class BoatChaosManager : MonoBehaviour
 
     private Rigidbody rb;
 
-    public void Start()
+    public void Awake()
     {
-
         rb = GetComponent<Rigidbody>();
+
+        StartCoroutine(SpawnProps());
+    }
+
+    IEnumerator SpawnProps()
+    {
+        yield return new WaitForEndOfFrame();
         //GameEventController.instance.ReloadOcean();
 
         _chaosPercent = GameManager.instance.chaosPercent;
@@ -51,43 +57,45 @@ public class BoatChaosManager : MonoBehaviour
         {
             float chance = Random.Range((GameManager.instance.chaosPercent / 100), 1);
 
-            if (chance < 0.20f)
-                return;
+            Debug.Log("Chance :" + chance);
 
-            int rr = Random.Range(0, boatProps.Count);
-
-            if (_chaosPercent >= boatProps[rr].minimumChaosRequiredToSpawn && _chaosPercent <= boatProps[rr].maximumChaosRequiredToSpawn)
+            if (chance > 0.20f) 
             {
+                int rr = Random.Range(0, boatProps.Count);
+
                 if (boatProps[rr].attachedToParent)
                     Instantiate(boatProps[rr].propVariant[Random.Range(0, boatProps[rr].propVariant.Length)], boatPropSpawnPoints[i]);
                 else
                     Instantiate(boatProps[rr].propVariant[Random.Range(0, boatProps[rr].propVariant.Length)], boatPropSpawnPoints[i].position, Quaternion.identity);
             }
+
+            //if (_chaosPercent >= boatProps[rr].minimumChaosRequiredToSpawn && _chaosPercent <= boatProps[rr].maximumChaosRequiredToSpawn)
+            //{
+
+            //}
         }
 
         for (int i = 0; i < oceanPropSpawnPoints.Length; i++)
         {
             float chance = Random.Range((GameManager.instance.chaosPercent / 100), 1);
 
-            if (chance < 0.25f)
-                return;
-
-            int rr = Random.Range(0, oceanProps.Count);
-
-            if (_chaosPercent >= oceanProps[rr].minimumChaosRequiredToSpawn && _chaosPercent <= oceanProps[rr].maximumChaosRequiredToSpawn)
+            if (chance > 0.25f)
             {
-                if(oceanProps[rr].attachedToParent)
-                    Instantiate(oceanProps[rr].propVariant[Random.Range(0, oceanProps[rr].propVariant.Length)], oceanPropSpawnPoints[i]);
-                else
-                    Instantiate(oceanProps[rr].propVariant[Random.Range(0, oceanProps[rr].propVariant.Length)], oceanPropSpawnPoints[i].position, Quaternion.identity);
-            }
+                int rr = Random.Range(0, oceanProps.Count);
 
+                if (_chaosPercent >= oceanProps[rr].minimumChaosRequiredToSpawn && _chaosPercent <= oceanProps[rr].maximumChaosRequiredToSpawn)
+                {
+                    if (oceanProps[rr].attachedToParent)
+                        Instantiate(oceanProps[rr].propVariant[Random.Range(0, oceanProps[rr].propVariant.Length)], oceanPropSpawnPoints[i]);
+                    else
+                        Instantiate(oceanProps[rr].propVariant[Random.Range(0, oceanProps[rr].propVariant.Length)], oceanPropSpawnPoints[i].position, Quaternion.identity);
+                }
+            }
         }
     }
 
     public void Update()
     {
-        return;
         //DEBUG
         _fixedBoatRot = transform.eulerAngles;
 
