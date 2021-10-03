@@ -1990,26 +1990,26 @@ MonoBehaviour:
   - propVariant:
     - {fileID: 7302162258992824483, guid: ae74aa401dc4ff344b09cdb0c61fac05, type: 3}
     attachedToParent: 1
-    minimumChaosRequiredToSpawn: 33
+    minimumChaosRequiredToSpawn: 0
     maximumChaosRequiredToSpawn: 100
   - propVariant:
     - {fileID: 90060630273602444, guid: 8292c4b8d826dda4c86e3a2c1168907a, type: 3}
-    attachedToParent: 1
+    attachedToParent: 0
     minimumChaosRequiredToSpawn: 0
     maximumChaosRequiredToSpawn: 100
   - propVariant:
     - {fileID: 1052475958741873088, guid: 139574fae2dd72546b5e762f1959b989, type: 3}
-    attachedToParent: 1
+    attachedToParent: 0
     minimumChaosRequiredToSpawn: 0
     maximumChaosRequiredToSpawn: 100
   - propVariant:
     - {fileID: 2383336009937409156, guid: fbd0809a74fbaa840b43e606682ea083, type: 3}
-    attachedToParent: 1
+    attachedToParent: 0
     minimumChaosRequiredToSpawn: 0
     maximumChaosRequiredToSpawn: 100
   - propVariant:
     - {fileID: 1440033832554409499, guid: 7c9b9ae83602caf449fcdc861c0ea867, type: 3}
-    attachedToParent: 1
+    attachedToParent: 0
     minimumChaosRequiredToSpawn: 20
     maximumChaosRequiredToSpawn: 100
   - propVariant:
