@@ -53,6 +53,8 @@ public class PlayerController : MonoBehaviour
     private CinemachineImpulseSource m_cinemachineImpulseSource;
     [SerializeField]
     private AudioSource m_speedBoostAudioSource;
+    [SerializeField]
+    private AudioSource m_ImpactAudioSource;
 
     [HideInInspector]
     public PlayerInputActions m_inputActions;
@@ -162,6 +164,9 @@ public class PlayerController : MonoBehaviour
         {
             //Stun anim
             m_cinemachineImpulseSource.GenerateImpulse(Vector3.one);
+
+            m_ImpactAudioSource.pitch = Random.Range(1f, 1.5f);
+            m_ImpactAudioSource.Play();
         }
     }
 

@@ -15,6 +15,8 @@ public class PlayerAnimatorFunctions : MonoBehaviour
     AudioSource m_audioSourceLeft;
     [SerializeField]
     AudioSource m_audioSourceRight;
+    [SerializeField]
+    AudioSource m_jumpAudioSource;
 
     public void Footstep(string side)
     {
@@ -34,5 +36,12 @@ public class PlayerAnimatorFunctions : MonoBehaviour
         }
 
         Destroy(ps, 1f);
+    }
+
+    public void Jump()
+    {
+        m_jumpAudioSource.pitch = Random.Range(1.2f, 1.6f);
+
+        m_jumpAudioSource.Play();
     }
 }
