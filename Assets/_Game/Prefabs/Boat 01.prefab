@@ -473,7 +473,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5216269554013275767}
   - component: {fileID: 1622646404147712482}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Boat Enter Collision
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1106,7 +1106,7 @@ GameObject:
   - component: {fileID: 8144901465418144724}
   - component: {fileID: 7935154697727979564}
   - component: {fileID: 2912920358098197936}
-  - component: {fileID: 6944417613820578817}
+  - component: {fileID: 6494356388274955651}
   m_Layer: 7
   m_Name: MESH_Coque
   m_TagString: Untagged
@@ -1177,8 +1177,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &6944417613820578817
-BoxCollider:
+--- !u!64 &6494356388274955651
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1187,9 +1187,10 @@ BoxCollider:
   m_Material: {fileID: 13400000, guid: bc2db0fb9fc79634ab28304df142ab98, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 30.00124, y: 259.5937, z: 38.118946}
-  m_Center: {x: 0.0006198883, y: 70.36993, z: -18.993826}
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 2960875248434221090, guid: d14331955b930e04a9724df4b8b72ad8, type: 3}
 --- !u!1 &2465110011946812794
 GameObject:
   m_ObjectHideFlags: 0
@@ -2239,6 +2240,7 @@ GameObject:
   - component: {fileID: 7868474473910827070}
   - component: {fileID: 6944417612499270935}
   - component: {fileID: 6944417612499270934}
+  - component: {fileID: 1362073123894831978}
   m_Layer: 0
   m_Name: "MESH_BArri\xE8re"
   m_TagString: Untagged
@@ -2318,7 +2320,7 @@ BoxCollider:
   m_GameObject: {fileID: 5939733704617748629}
   m_Material: {fileID: 13400000, guid: bc2db0fb9fc79634ab28304df142ab98, type: 2}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 0.5, y: 184.67587, z: 1.4130365}
   m_Center: {x: 0, y: -92.337944, z: -0.3728068}
@@ -2331,10 +2333,24 @@ BoxCollider:
   m_GameObject: {fileID: 5939733704617748629}
   m_Material: {fileID: 13400000, guid: bc2db0fb9fc79634ab28304df142ab98, type: 2}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 0.5, y: 184.67587, z: 1.4130365}
   m_Center: {x: 29.4, y: -92.337944, z: -0.3728068}
+--- !u!64 &1362073123894831978
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5939733704617748629}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 8621028407727095073, guid: d14331955b930e04a9724df4b8b72ad8, type: 3}
 --- !u!1 &5942597993424406561
 GameObject:
   m_ObjectHideFlags: 0
