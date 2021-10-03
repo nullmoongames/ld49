@@ -3513,35 +3513,35 @@ MonoBehaviour:
   _centerOfMass: {x: 0, y: 12, z: 45}
   _forcePoints:
   - _weight: 1
-    _offsetPosition: {x: -10, y: 0, z: 90}
+    _offsetPosition: {x: -5, y: 0, z: 90}
   - _weight: 1
     _offsetPosition: {x: 0, y: 0, z: 90}
   - _weight: 1
-    _offsetPosition: {x: 10, y: 0, z: 90}
+    _offsetPosition: {x: 5, y: 0, z: 90}
   - _weight: 1
-    _offsetPosition: {x: -10, y: 0, z: 60}
+    _offsetPosition: {x: -5, y: 0, z: 60}
   - _weight: 1
     _offsetPosition: {x: 0, y: 0, z: 60}
   - _weight: 1
-    _offsetPosition: {x: 10, y: 0, z: 60}
+    _offsetPosition: {x: 5, y: 0, z: 60}
   - _weight: 1
-    _offsetPosition: {x: -10, y: 0, z: 30}
+    _offsetPosition: {x: -5, y: 0, z: 30}
   - _weight: 1
-    _offsetPosition: {x: 10, y: 0, z: 30}
+    _offsetPosition: {x: 5, y: 0, z: 30}
   - _weight: 1
     _offsetPosition: {x: 0, y: 0, z: 30}
   - _weight: 1
-    _offsetPosition: {x: -10, y: 0, z: 0}
+    _offsetPosition: {x: -5, y: 0, z: 0}
   - _weight: 1
     _offsetPosition: {x: 0, y: 0, z: 0}
   - _weight: 1
-    _offsetPosition: {x: 10, y: 0, z: 0}
+    _offsetPosition: {x: 5, y: 0, z: 0}
   _forceHeightOffset: 0
   _forceMultiplier: 6
   _minSpatialLength: 90
   _turningHeel: 0.35
   _dragInWaterUp: 1
-  _dragInWaterRight: 4
+  _dragInWaterRight: 10
   _dragInWaterForward: 0.5
   _enginePower: 0
   _turnPower: 0
@@ -3571,7 +3571,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5140781151191867851}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a9dce546b125fc343a8d88884825486f, type: 3}
   m_Name: 
@@ -4637,7 +4637,7 @@ GameObject:
   - component: {fileID: 4294529198838820657}
   - component: {fileID: 6253312926731164219}
   - component: {fileID: 3194623014603066371}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Object001
   m_TagString: SpeedBoost
   m_Icon: {fileID: 0}
