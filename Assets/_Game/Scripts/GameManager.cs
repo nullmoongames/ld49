@@ -120,7 +120,7 @@ public class GameManager : MonoBehaviour
         _FadeToDeathScreen();
     }
 
-    void _SaveHighscore()
+    public void SaveHighscore()
     {
         if (PlayerPrefs.GetInt("Highscore") < highscore)
             PlayerPrefs.SetInt("Highscore", (int)highscore);
