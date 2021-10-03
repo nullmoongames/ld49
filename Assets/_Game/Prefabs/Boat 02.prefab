@@ -3513,35 +3513,35 @@ MonoBehaviour:
   _centerOfMass: {x: 0, y: 12, z: 45}
   _forcePoints:
   - _weight: 1
-    _offsetPosition: {x: -10, y: 0, z: 90}
+    _offsetPosition: {x: -5, y: 0, z: 90}
   - _weight: 1
     _offsetPosition: {x: 0, y: 0, z: 90}
   - _weight: 1
-    _offsetPosition: {x: 10, y: 0, z: 90}
+    _offsetPosition: {x: 5, y: 0, z: 90}
   - _weight: 1
-    _offsetPosition: {x: -10, y: 0, z: 60}
+    _offsetPosition: {x: -5, y: 0, z: 60}
   - _weight: 1
     _offsetPosition: {x: 0, y: 0, z: 60}
   - _weight: 1
-    _offsetPosition: {x: 10, y: 0, z: 60}
+    _offsetPosition: {x: 5, y: 0, z: 60}
   - _weight: 1
-    _offsetPosition: {x: -10, y: 0, z: 30}
+    _offsetPosition: {x: -5, y: 0, z: 30}
   - _weight: 1
-    _offsetPosition: {x: 10, y: 0, z: 30}
+    _offsetPosition: {x: 5, y: 0, z: 30}
   - _weight: 1
     _offsetPosition: {x: 0, y: 0, z: 30}
   - _weight: 1
-    _offsetPosition: {x: -10, y: 0, z: 0}
+    _offsetPosition: {x: -5, y: 0, z: 0}
   - _weight: 1
     _offsetPosition: {x: 0, y: 0, z: 0}
   - _weight: 1
-    _offsetPosition: {x: 10, y: 0, z: 0}
+    _offsetPosition: {x: 5, y: 0, z: 0}
   _forceHeightOffset: 0
   _forceMultiplier: 6
   _minSpatialLength: 90
   _turningHeel: 0.35
   _dragInWaterUp: 1
-  _dragInWaterRight: 4
+  _dragInWaterRight: 10
   _dragInWaterForward: 0.5
   _enginePower: 0
   _turnPower: 0
@@ -3576,38 +3576,76 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9dce546b125fc343a8d88884825486f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boatProps: []
+  boatProps:
+  - propVariant:
+    - {fileID: 7302162258992824483, guid: ae74aa401dc4ff344b09cdb0c61fac05, type: 3}
+    attachedToParent: 0
+    minimumChaosRequiredToSpawn: 33
+    maximumChaosRequiredToSpawn: 100
+  - propVariant:
+    - {fileID: 90060630273602444, guid: 8292c4b8d826dda4c86e3a2c1168907a, type: 3}
+    attachedToParent: 0
+    minimumChaosRequiredToSpawn: 0
+    maximumChaosRequiredToSpawn: 100
+  - propVariant:
+    - {fileID: 1052475958741873088, guid: 139574fae2dd72546b5e762f1959b989, type: 3}
+    attachedToParent: 0
+    minimumChaosRequiredToSpawn: 0
+    maximumChaosRequiredToSpawn: 100
+  - propVariant:
+    - {fileID: 2383336009937409156, guid: fbd0809a74fbaa840b43e606682ea083, type: 3}
+    attachedToParent: 0
+    minimumChaosRequiredToSpawn: 0
+    maximumChaosRequiredToSpawn: 100
+  - propVariant:
+    - {fileID: 1440033832554409499, guid: 7c9b9ae83602caf449fcdc861c0ea867, type: 3}
+    attachedToParent: 0
+    minimumChaosRequiredToSpawn: 20
+    maximumChaosRequiredToSpawn: 100
+  - propVariant:
+    - {fileID: 5533675669795933104, guid: 83415595f20662b48b12f050a81b5955, type: 3}
+    attachedToParent: 1
+    minimumChaosRequiredToSpawn: 0
+    maximumChaosRequiredToSpawn: 100
   oceanProps:
   - propVariant:
     - {fileID: 8562865382295276885, guid: 4e800e40b6154214990013cdffc43d93, type: 3}
+    attachedToParent: 0
     minimumChaosRequiredToSpawn: 0
     maximumChaosRequiredToSpawn: 100
   - propVariant:
     - {fileID: 100000, guid: 5971121cce08fdb4295a43dd39a7382c, type: 3}
+    attachedToParent: 0
     minimumChaosRequiredToSpawn: 0
     maximumChaosRequiredToSpawn: 33
   - propVariant:
     - {fileID: 100000, guid: 910f0349684df5c42bf84bda0f818070, type: 3}
+    attachedToParent: 0
     minimumChaosRequiredToSpawn: 33
     maximumChaosRequiredToSpawn: 66
   - propVariant:
     - {fileID: 100000, guid: 39ce30802aeb48842bf1a864743bfe10, type: 3}
+    attachedToParent: 0
     minimumChaosRequiredToSpawn: 66
     maximumChaosRequiredToSpawn: 100
   - propVariant:
     - {fileID: 100002, guid: 213c3312568623e47903adc329c8115c, type: 3}
+    attachedToParent: 0
     minimumChaosRequiredToSpawn: 33
     maximumChaosRequiredToSpawn: 100
   - propVariant:
     - {fileID: 100000, guid: 91730bb842ef31b41b8228d5a2eee0cd, type: 3}
+    attachedToParent: 0
     minimumChaosRequiredToSpawn: 0
     maximumChaosRequiredToSpawn: 100
   - propVariant:
     - {fileID: 100000, guid: c63c77daacd0013499e2cf8f9c39edbc, type: 3}
+    attachedToParent: 1
     minimumChaosRequiredToSpawn: 0
     maximumChaosRequiredToSpawn: 66
   - propVariant:
     - {fileID: 100000, guid: e169bd13f37509046ae97d918a0a22fe, type: 3}
+    attachedToParent: 1
     minimumChaosRequiredToSpawn: 50
     maximumChaosRequiredToSpawn: 100
   boatPropSpawnPoints:
@@ -3986,7 +4024,7 @@ GameObject:
   - component: {fileID: 5885670540245396851}
   - component: {fileID: 3028599978940338919}
   - component: {fileID: 278494441269218948}
-  - component: {fileID: 5629082847365267599}
+  - component: {fileID: 2057086542706206886}
   m_Layer: 0
   m_Name: MESH_Mat003
   m_TagString: Untagged
@@ -4058,8 +4096,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &5629082847365267599
-MeshCollider:
+--- !u!136 &2057086542706206886
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -4068,10 +4106,10 @@ MeshCollider:
   m_Material: {fileID: 13400000, guid: bc2db0fb9fc79634ab28304df142ab98, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -3205558616681484492, guid: 3456c97c321ce31469b959cf706c5bd3, type: 3}
+  m_Radius: 1.5
+  m_Height: 149
+  m_Direction: 2
+  m_Center: {x: 0, y: -0.12980394, z: 74.14}
 --- !u!1 &5726085587178053226
 GameObject:
   m_ObjectHideFlags: 0
@@ -4113,7 +4151,7 @@ GameObject:
   - component: {fileID: 1847575285213383502}
   - component: {fileID: 3834142014153909145}
   - component: {fileID: 6682185227145974888}
-  - component: {fileID: 5762676043429572498}
+  - component: {fileID: 5050444247484348480}
   m_Layer: 0
   m_Name: MESH_Mat002
   m_TagString: Untagged
@@ -4185,8 +4223,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &5762676043429572498
-MeshCollider:
+--- !u!136 &5050444247484348480
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -4195,10 +4233,10 @@ MeshCollider:
   m_Material: {fileID: 13400000, guid: bc2db0fb9fc79634ab28304df142ab98, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 3486306032058845111, guid: 3456c97c321ce31469b959cf706c5bd3, type: 3}
+  m_Radius: 1.5
+  m_Height: 149
+  m_Direction: 2
+  m_Center: {x: 0, y: -0.12980394, z: 74.14}
 --- !u!1 &6013481376518342098
 GameObject:
   m_ObjectHideFlags: 0
@@ -4599,7 +4637,7 @@ GameObject:
   - component: {fileID: 4294529198838820657}
   - component: {fileID: 6253312926731164219}
   - component: {fileID: 3194623014603066371}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Object001
   m_TagString: SpeedBoost
   m_Icon: {fileID: 0}
@@ -5146,7 +5184,7 @@ GameObject:
   - component: {fileID: 3368101077864440677}
   - component: {fileID: 4870544570432909809}
   - component: {fileID: 9003373702023072344}
-  - component: {fileID: 7764345761301964401}
+  - component: {fileID: 4186567688459614234}
   m_Layer: 0
   m_Name: MESH_Mat004
   m_TagString: Untagged
@@ -5218,8 +5256,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &7764345761301964401
-MeshCollider:
+--- !u!136 &4186567688459614234
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -5228,10 +5266,10 @@ MeshCollider:
   m_Material: {fileID: 13400000, guid: bc2db0fb9fc79634ab28304df142ab98, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -8997794312480990548, guid: 3456c97c321ce31469b959cf706c5bd3, type: 3}
+  m_Radius: 1.5
+  m_Height: 149
+  m_Direction: 2
+  m_Center: {x: 0, y: -0.12980394, z: 74.14}
 --- !u!1 &7924935957787172430
 GameObject:
   m_ObjectHideFlags: 0

@@ -129,7 +129,7 @@ public class PlayerController : MonoBehaviour
         if (m_rigidbody.velocity.z < m_maxRunSpeed)
         {
             // Apply constant force backwards for auto running
-            m_rigidbody.AddForce(Vector3.forward * m_runAcceleration * forwardMultiplier, ForceMode.Force);
+            m_rigidbody.AddForce(transform.forward * m_runAcceleration * forwardMultiplier, ForceMode.Force);
         }
 
         // Apply gravity

@@ -9,6 +9,7 @@ public class BoatChaosManager : MonoBehaviour
     public class BoatProp
     {
         public GameObject[] propVariant;
+        public bool attachedToParent;
 
         [Range(0, 100)]
         public float minimumChaosRequiredToSpawn, maximumChaosRequiredToSpawn;
@@ -18,6 +19,7 @@ public class BoatChaosManager : MonoBehaviour
     public class OceanProp 
     {
         public GameObject[] propVariant;
+        public bool attachedToParent;
 
         [Range(0, 100)]
         public float minimumChaosRequiredToSpawn, maximumChaosRequiredToSpawn;
@@ -37,31 +39,58 @@ public class BoatChaosManager : MonoBehaviour
 
     private Rigidbody rb;
 
-    public void Start()
+    public void Awake()
     {
-
         rb = GetComponent<Rigidbody>();
+
+        StartCoroutine(SpawnProps());
+    }
+
+    IEnumerator SpawnProps()
+    {
+        yield return new WaitForEndOfFrame();
         //GameEventController.instance.ReloadOcean();
 
         _chaosPercent = GameManager.instance.chaosPercent;
 
-        //for(int i = 0; i < boatPropSpawnPoints.Length; i++)
-        //{
-        //    if(_chaosPercent >= boatProps[i].minimumChaosRequiredToSpawn && _chaosPercent <= boatProps[i].maximumChaosRequiredToSpawn)
-        //        Instantiate(boatProps[i].propVariant[Random.Range(0, boatProps[i].propVariant.Length)], boatPropSpawnPoints[i]);
-        //}
+        for (int i = 0; i < boatPropSpawnPoints.Length; i++)
+        {
+            float chance = Random.Range((GameManager.instance.chaosPercent / 100), 1);
+
+            Debug.Log("Chance :" + chance);
+
+            if (chance > 0.20f) 
+            {
+                int rr = Random.Range(0, boatProps.Count);
+
+                if (boatProps[rr].attachedToParent)
+                    Instantiate(boatProps[rr].propVariant[Random.Range(0, boatProps[rr].propVariant.Length)], boatPropSpawnPoints[i]);
+                else
+                    Instantiate(boatProps[rr].propVariant[Random.Range(0, boatProps[rr].propVariant.Length)], boatPropSpawnPoints[i].position, Quaternion.identity);
+            }
+
+            //if (_chaosPercent >= boatProps[rr].minimumChaosRequiredToSpawn && _chaosPercent <= boatProps[rr].maximumChaosRequiredToSpawn)
+            //{
+
+            //}
+        }
 
         for (int i = 0; i < oceanPropSpawnPoints.Length; i++)
         {
-            float change = Random.Range((GameManager.instance.chaosPercent / 100), 1);
+            float chance = Random.Range((GameManager.instance.chaosPercent / 100), 1);
 
-            if (change < 0.25f)
-                return;
+            if (chance > 0.25f)
+            {
+                int rr = Random.Range(0, oceanProps.Count);
 
-            int rr = Random.Range(0, oceanProps.Count);
-
-            if (_chaosPercent >= oceanProps[rr].minimumChaosRequiredToSpawn && _chaosPercent <= oceanProps[rr].maximumChaosRequiredToSpawn)
-                Instantiate(oceanProps[rr].propVariant[Random.Range(0, oceanProps[rr].propVariant.Length)], oceanPropSpawnPoints[i]);
+                if (_chaosPercent >= oceanProps[rr].minimumChaosRequiredToSpawn && _chaosPercent <= oceanProps[rr].maximumChaosRequiredToSpawn)
+                {
+                    if (oceanProps[rr].attachedToParent)
+                        Instantiate(oceanProps[rr].propVariant[Random.Range(0, oceanProps[rr].propVariant.Length)], oceanPropSpawnPoints[i]);
+                    else
+                        Instantiate(oceanProps[rr].propVariant[Random.Range(0, oceanProps[rr].propVariant.Length)], oceanPropSpawnPoints[i].position, Quaternion.identity);
+                }
+            }
         }
     }
 
@@ -79,13 +108,13 @@ public class BoatChaosManager : MonoBehaviour
 
         if(transform.rotation.x > rotationConsideringBoatIsBug.x) 
         {
-            Debug.Log("X is bug");
+            //Debug.Log("X is bug");
             _fixedBoatRot.x = 0;
         }
 
         if(transform.rotation.x < -rotationConsideringBoatIsBug.x)
         {
-            Debug.Log("-X is bug");
+            //Debug.Log("-X is bug");
             _fixedBoatRot.x = 0;
         }
 
