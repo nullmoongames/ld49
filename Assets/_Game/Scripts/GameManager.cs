@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     [Header("Score")]
     public int distanceCover = 0;
     public TMP_Text scoreText;
+    public TMP_Text highscoreText;
     private float highscore;
 
     [Header("UI Menu")]
@@ -52,6 +53,7 @@ public class GameManager : MonoBehaviour
 
         _FadeToMainMenu();
         scoreText.text = "<b>" + 0 + "</b>m";
+        _LoadHighscore();
 
     }
 
@@ -120,12 +122,13 @@ public class GameManager : MonoBehaviour
 
     void _SaveHighscore()
     {
-
+        if (PlayerPrefs.GetInt("Highscore") < highscore)
+            PlayerPrefs.SetInt("Highscore", (int)highscore);
     }
 
     void _LoadHighscore() 
     {
-
+        highscoreText.text = "Highscore : " + PlayerPrefs.GetInt("Highscore");
     }
 
     void _FadeToGame() 
