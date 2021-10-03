@@ -2079,6 +2079,7 @@ GameObject:
   - component: {fileID: 9054499259346115051}
   - component: {fileID: 9191241643291584272}
   - component: {fileID: 862420865619220779}
+  - component: {fileID: -9120065061774706737}
   m_Layer: 0
   m_Name: StartingBoat
   m_TagString: StartingBoat
@@ -2268,6 +2269,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30e236c6305d4d846bac7339a7087d75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-9120065061774706737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4968558965350602301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0574624e5b203b940b8ff8cc95de8d12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _debugDraw: 0
+  _offset: 5
 --- !u!1 &5044401753086833053
 GameObject:
   m_ObjectHideFlags: 0
