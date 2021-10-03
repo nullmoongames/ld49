@@ -17,10 +17,7 @@ public class GameEventController : MonoBehaviour
     {
         ocean = FindObjectOfType<Crest.OceanRenderer>();
         instance = this;
-        Crest.BoatProbes _crestBoat = FindObjectOfType<Crest.BoatProbes>();
-
-        if (_crestBoat != null)
-            _startingBoat = _crestBoat.transform;
+        _startingBoat = GameObject.FindGameObjectWithTag("StartingBoat").transform;
     }
     public void DeathEvent()
     {

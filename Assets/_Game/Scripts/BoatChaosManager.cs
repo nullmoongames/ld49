@@ -43,7 +43,7 @@ public class BoatChaosManager : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
 
-        //StartCoroutine(SpawnProps());
+        StartCoroutine(SpawnProps());
     }
 
     IEnumerator SpawnProps()
@@ -90,56 +90,5 @@ public class BoatChaosManager : MonoBehaviour
                 }
             }
         }
-    }
-
-    public void Update()
-    {
-        //DEBUG
-        _fixedBoatRot = transform.eulerAngles;
-
-        if (transform.position.y >= heightConsideringBoatIsBug)
-        {
-            rb.velocity = Vector3.zero;
-            transform.position = new Vector3(transform.position.x, 10, transform.position.z);
-        }
-
-
-        if(transform.rotation.x > rotationConsideringBoatIsBug.x) 
-        {
-            //Debug.Log("X is bug");
-            _fixedBoatRot.x = 0;
-        }
-
-        if(transform.rotation.x < -rotationConsideringBoatIsBug.x)
-        {
-            //Debug.Log("-X is bug");
-            _fixedBoatRot.x = 0;
-        }
-
-        if (transform.rotation.y > rotationConsideringBoatIsBug.y)
-        {
-            Debug.Log("Y is bug");
-            _fixedBoatRot.y = 0;
-        }
-
-        if (transform.rotation.y < -rotationConsideringBoatIsBug.y)
-        {
-            Debug.Log("-Y is bug");
-            _fixedBoatRot.y = 0;
-        }
-
-        if (transform.rotation.z > rotationConsideringBoatIsBug.z)
-        {
-            Debug.Log("Z is bug");
-            _fixedBoatRot.z = 0;
-        }
-
-        if(transform.rotation.z < -rotationConsideringBoatIsBug.z)
-        {
-            Debug.Log("-Z is bug");
-            _fixedBoatRot.z = 0;
-        }
-
-        transform.eulerAngles = _fixedBoatRot;
     }
 }

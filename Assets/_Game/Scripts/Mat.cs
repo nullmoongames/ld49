@@ -22,7 +22,7 @@ public class Mat : MonoBehaviour
     {
         BoxCollider collider = gameObject.AddComponent<BoxCollider>();
         collider.isTrigger = true;
-        collider.size = new Vector3(40, m_collisionDistanceFromPlayer, 142);
+        collider.size = new Vector3(40, 250, 142);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -30,8 +30,7 @@ public class Mat : MonoBehaviour
         if(other.CompareTag("Player"))
         {
             m_rigidbody.isKinematic = false;
-            m_rigidbody.AddForceAtPosition(Vector3.right * Random.Range(-1, 1) * 5f, transform.position, ForceMode.VelocityChange);
-            m_rigidbody.AddTorque(Vector3.up * 3, ForceMode.VelocityChange);
+            m_rigidbody.AddForceAtPosition(Vector3.right * Random.Range(-1, 1) * 10f, transform.position, ForceMode.Impulse);
         }
     }
 }

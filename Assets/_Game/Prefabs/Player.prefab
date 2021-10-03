@@ -220,7 +220,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 887112623}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -40, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7704990069898600189}
@@ -256,6 +256,7 @@ MonoBehaviour:
   z: 1
   offset: {x: 0, y: 0, z: 0}
   target: {fileID: 587582804916648653}
+  forceStartingPosSet: 1
 --- !u!1 &912762090
 GameObject:
   m_ObjectHideFlags: 0
@@ -644,8 +645,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 587582804870471017}
-  m_LocalRotation: {x: 0.016243558, y: 0.000000017237685, z: -2.800383e-10, w: 0.9998681}
-  m_LocalPosition: {x: 0, y: 6, z: -16}
+  m_LocalRotation: {x: 0.01624358, y: -0.000000017237685, z: 2.800387e-10, w: 0.9998681}
+  m_LocalPosition: {x: 0, y: 6, z: -15.999992}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 587582804676461750}
@@ -822,7 +823,7 @@ MonoBehaviour:
   m_moveAcceleration: 1000
   m_maxSpeed: 100
   m_inAirMovementMultiplier: 0.5
-  m_jumpForce: 24
+  m_jumpForce: 16
   m_gravity: 1.5
   m_maxRunSpeed: 55
   m_runAcceleration: 12
