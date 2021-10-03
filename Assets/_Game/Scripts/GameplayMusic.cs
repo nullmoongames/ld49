@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class GameplayMusic : MonoBehaviour
 {
+    [SerializeField]
+    AudioClip m_gameplayMusic;
+
+    AudioSource m_audioSource;
+
     private static GameplayMusic _Instance;
 
     public static GameplayMusic Instance { get { return _Instance; } }
@@ -20,5 +25,12 @@ public class GameplayMusic : MonoBehaviour
             _Instance = this;
             DontDestroyOnLoad(this);
         }
+    }
+
+    public void SwitchToGameplayMusic()
+    {
+        m_audioSource.Stop();
+        m_audioSource.clip = m_gameplayMusic;
+        m_audioSource.Play();
     }
 }

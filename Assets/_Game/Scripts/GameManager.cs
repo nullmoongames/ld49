@@ -98,6 +98,7 @@ public class GameManager : MonoBehaviour
         _player.gameObject.SetActive(true);
         _FadeToGame();
         _gameIsPlaying = true;
+        GameplayMusic.Instance.SwitchToGameplayMusic();
     }
 
     public void DisplayDeathScreen()

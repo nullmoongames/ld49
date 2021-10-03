@@ -625,19 +625,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: -5084290789858105985, guid: b09fd557a96badd49b536b4f35e5fa8c, type: 3}
   m_PrefabInstance: {fileID: 968004503}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &150800969
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 150800968}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f88a70016fc0cbf479e86890f8997200, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_collisionDistanceFromPlayer: 150
 --- !u!64 &150800970
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -668,6 +655,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &150800974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 150800968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f88a70016fc0cbf479e86890f8997200, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_collisionDistanceFromPlayer: 150
 --- !u!1001 &166805448
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3114,6 +3114,23 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -121973015754549885, guid: b09fd557a96badd49b536b4f35e5fa8c, type: 3}
+--- !u!1 &792050780 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b09fd557a96badd49b536b4f35e5fa8c, type: 3}
+  m_PrefabInstance: {fileID: 968004503}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &792050781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 792050780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30e236c6305d4d846bac7339a7087d75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &796351913
 GameObject:
   m_ObjectHideFlags: 0
@@ -13153,11 +13170,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 755292273, guid: 579eb038e3d675a468fa6ac37a997488, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.0000000021481275
+      value: 0.000000002148128
       objectReference: {fileID: 0}
     - target: {fileID: 755292273, guid: 579eb038e3d675a468fa6ac37a997488, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -1.0713917e-10
+      value: 1.071392e-10
       objectReference: {fileID: 0}
     - target: {fileID: 587582804870471015, guid: 579eb038e3d675a468fa6ac37a997488, type: 3}
       propertyPath: m_LocalRotation.x
