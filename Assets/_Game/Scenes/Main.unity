@@ -147,8 +147,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 50391336}
-  m_LocalRotation: {x: -0.031003771, y: 0.92641854, z: -0.077777945, w: -0.3670669}
-  m_LocalPosition: {x: 80.27707, y: 29.0881, z: 117.79235}
+  m_LocalRotation: {x: -0.024776932, y: 0.21527168, z: -0.005245492, w: -0.9762258}
+  m_LocalPosition: {x: 7.3743896, y: -8.166618, z: -46.294415}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 362101138}
@@ -366,8 +366,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 72570445}
-  m_LocalRotation: {x: -0.031003771, y: 0.92641854, z: -0.077777945, w: -0.3670669}
-  m_LocalPosition: {x: 80.27707, y: 29.0881, z: 117.79235}
+  m_LocalRotation: {x: -0.024776932, y: 0.21527168, z: -0.005245492, w: -0.9762258}
+  m_LocalPosition: {x: 7.3743896, y: -8.166618, z: -46.294415}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 633909828}
@@ -402,11 +402,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 755292273, guid: 579eb038e3d675a468fa6ac37a997488, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.000000002148128
+      value: -0.0000000021481275
       objectReference: {fileID: 0}
     - target: {fileID: 755292273, guid: 579eb038e3d675a468fa6ac37a997488, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 1.071392e-10
+      value: -1.0713917e-10
       objectReference: {fileID: 0}
     - target: {fileID: 755292273, guid: 579eb038e3d675a468fa6ac37a997488, type: 3}
       propertyPath: m_LocalRotation.z
@@ -624,7 +624,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 166494348}
   m_CullTransparentMesh: 1
---- !u!21 &285355609
+--- !u!21 &342548952
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
@@ -702,61 +702,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!21 &365582186
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Override
-  m_Shader: {fileID: 4800000, guid: a3a3bc8785681554d9558e2ea68f100e, type: 3}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs: []
-    m_Floats:
-    - _Banner: 1
-    - _DirectionalCat: 1
-    - _DirectionalFalloff: 2
-    - _DirectionalIntensity: 1
-    - _FogAxisMode: 1
-    - _FogCat: 1
-    - _FogColorDuo: 1
-    - _FogDistanceEnd: 200
-    - _FogDistanceFalloff: 2
-    - _FogDistanceStart: -200
-    - _FogHeightEnd: 200
-    - _FogHeightFalloff: 2
-    - _FogHeightStart: 0
-    - _FogIntensity: 1
-    - _FogLayersMode: 0
-    - _IsHeightFogPreset: 1
-    - _IsHeightFogShader: 1
-    - _NoiseCat: 1
-    - _NoiseDistanceEnd: 50
-    - _NoiseIntensity: 1
-    - _NoiseModeBlend: 1
-    - _NoiseScale: 30
-    - _SkyboxCat: 1
-    - _SkyboxFogFalloff: 1
-    - _SkyboxFogFill: 1
-    - _SkyboxFogHeight: 1
-    - _SkyboxFogIntensity: 1
-    m_Colors:
-    - _DirectionalColor: {r: 1, g: 0.7793103, b: 0.5, a: 1}
-    - _DirectionalDir: {r: 0, g: 0, b: 0, a: 0}
-    - _FogAxisOption: {r: 0, g: 0, b: 0, a: 0}
-    - _FogColorEnd: {r: 0.8862745, g: 1.443137, b: 2, a: 1}
-    - _FogColorStart: {r: 0.4411765, g: 0.722515, b: 1, a: 1}
-    - _NoiseSpeed: {r: 0.5, g: 0, b: 0.5, a: 0}
-  m_BuildTextureStacks: []
 --- !u!1 &396997858
 GameObject:
   m_ObjectHideFlags: 0
@@ -2512,12 +2457,12 @@ MonoBehaviour:
   - {fileID: 3875562275760079671, guid: 9d4c4c7f46b2bcb4b88e98d5e44f0b2f, type: 3}
   generatedBoatCountEachCycle: 5
   passedBoatDestroyedDistance: 5
-  forwardMinDistBetweenBoats: 22.7
+  forwardMinDistBetweenBoats: 25.3
   forwardMaxDistBetweenBoats: 34.3
   sideMinDistBetweenBoats: -7
   sideMaxDistBetweenBoats: 6.6
-  upMinDistBetweenBoats: 0
-  upMaxDistBetweenBoats: 0
+  upMinDistBetweenBoats: -5
+  upMaxDistBetweenBoats: 5.6
 --- !u!1 &1551868357
 GameObject:
   m_ObjectHideFlags: 0
@@ -2748,6 +2693,61 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!21 &1610066419
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Override
+  m_Shader: {fileID: 4800000, guid: a3a3bc8785681554d9558e2ea68f100e, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs: []
+    m_Floats:
+    - _Banner: 1
+    - _DirectionalCat: 1
+    - _DirectionalFalloff: 2
+    - _DirectionalIntensity: 1
+    - _FogAxisMode: 1
+    - _FogCat: 1
+    - _FogColorDuo: 1
+    - _FogDistanceEnd: 200
+    - _FogDistanceFalloff: 2
+    - _FogDistanceStart: -200
+    - _FogHeightEnd: 200
+    - _FogHeightFalloff: 2
+    - _FogHeightStart: 0
+    - _FogIntensity: 1
+    - _FogLayersMode: 0
+    - _IsHeightFogPreset: 1
+    - _IsHeightFogShader: 1
+    - _NoiseCat: 1
+    - _NoiseDistanceEnd: 50
+    - _NoiseIntensity: 1
+    - _NoiseModeBlend: 1
+    - _NoiseScale: 30
+    - _SkyboxCat: 1
+    - _SkyboxFogFalloff: 1
+    - _SkyboxFogFill: 1
+    - _SkyboxFogHeight: 1
+    - _SkyboxFogIntensity: 1
+    m_Colors:
+    - _DirectionalColor: {r: 1, g: 0.7793103, b: 0.5, a: 1}
+    - _DirectionalDir: {r: 0, g: 0, b: 0, a: 0}
+    - _FogAxisOption: {r: 0, g: 0, b: 0, a: 0}
+    - _FogColorEnd: {r: 0.8862745, g: 1.443137, b: 2, a: 1}
+    - _FogColorStart: {r: 0.4411765, g: 0.722515, b: 1, a: 1}
+    - _NoiseSpeed: {r: 0.5, g: 0, b: 0.5, a: 0}
+  m_BuildTextureStacks: []
 --- !u!1 &1650982362
 GameObject:
   m_ObjectHideFlags: 0
@@ -2812,15 +2812,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9027054880583906759, guid: 12eb71d164078d044b0be3d7200d3ebe, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 80.27707
+      value: 7.3743896
       objectReference: {fileID: 0}
     - target: {fileID: 9027054880583906759, guid: 12eb71d164078d044b0be3d7200d3ebe, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 29.0881
+      value: -8.166618
       objectReference: {fileID: 0}
     - target: {fileID: 9027054880583906759, guid: 12eb71d164078d044b0be3d7200d3ebe, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 117.79235
+      value: -46.294415
       objectReference: {fileID: 0}
     - target: {fileID: 9027054880583906759, guid: 12eb71d164078d044b0be3d7200d3ebe, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3074,118 +3074,118 @@ MonoBehaviour:
   - 916.6448
   - 992.9045
   _amplitudes:
-  - 0.00018268247
-  - 0.0010232407
-  - 0.0013161045
-  - 0.0008714373
-  - 0.0013880007
-  - 0.0011237548
-  - 0.0007980769
-  - 0.000905528
-  - 0.00074714806
-  - 0.0004405588
-  - 0.0006468139
-  - 0.0012541127
-  - 0.00076923316
-  - 0.0012001096
-  - 0.00037623162
-  - 0.0007981053
-  - 0.0005359831
-  - 0.00027935588
-  - 0.0017707594
-  - 0.00057525246
-  - 0.0027240925
-  - 0.0030671204
-  - 0.0049844505
-  - 0.0068281316
-  - 0.0064807734
-  - 0.00750028
-  - 0.0012663638
-  - 0.006351398
-  - 0.013141545
-  - 0.0031423434
-  - 0.0053478074
-  - 0.00048413107
-  - 0.0021380968
-  - 0.009328401
-  - 0.018204723
-  - 0.0041370415
-  - 0.006517543
-  - 0.007413739
-  - 0.008018
-  - 0.02431709
-  - 0.028436216
-  - 0.011546291
-  - 0.02912431
-  - 0.029416107
-  - 0.016595136
-  - 0.010413653
-  - 0.0159204
-  - 0.004219869
-  - 0.009183394
-  - 0.036446314
-  - 0.013072715
-  - 0.029351816
-  - 0.06326655
-  - 0.03572636
-  - 0.047729537
-  - 0.0527374
-  - 0.10996077
-  - 0.106291205
-  - 0.09135552
-  - 0.09586917
-  - 0.16759257
-  - 0.099109225
-  - 0.1592377
-  - 0.042436063
-  - 0.019038515
-  - 0.19979458
-  - 0.013198543
-  - 0.122802645
-  - 0.17668152
-  - 0.30375883
-  - 0.014555064
-  - 0.08943907
-  - 0.16846174
-  - 0.4265125
-  - 0.19502604
-  - 0.57824826
-  - 0.28099704
-  - 0.30821094
-  - 0.67576927
-  - 0.18869027
-  - 0.36745676
-  - 0.0573412
-  - 0.7483329
-  - 0.47587967
-  - 0.31239474
-  - 0.9119356
-  - 0.24803019
-  - 0.1677465
-  - 0.033091377
-  - 0.0142665105
-  - 0.8396679
-  - 1.3585566
-  - 0.4223083
-  - 1.6474532
-  - 0.83602834
-  - 0.40247273
-  - 1.9335196
-  - 0.985711
-  - 0.3622959
-  - 2.6946914
-  - 1.3595172
-  - 2.6384957
-  - 2.633566
-  - 0.7352032
-  - 1.7872628
-  - 3.2055306
-  - 2.7937164
-  - 1.3108261
-  - 0.9193495
-  - 3.1236851
-  - 2.1316087
-  - 2.068976
+  - 0.00018816294
+  - 0.001053938
+  - 0.0013555877
+  - 0.0008975804
+  - 0.0014296407
+  - 0.0011574675
+  - 0.00082201924
+  - 0.0009326939
+  - 0.0007695625
+  - 0.00045377557
+  - 0.0006662183
+  - 0.001291736
+  - 0.00079231017
+  - 0.0012361129
+  - 0.00038751855
+  - 0.00082204846
+  - 0.00055206264
+  - 0.00028773653
+  - 0.0018238822
+  - 0.00059251
+  - 0.002805815
+  - 0.0031591342
+  - 0.0051339837
+  - 0.007032975
+  - 0.0066751963
+  - 0.007725288
+  - 0.0013043546
+  - 0.00654194
+  - 0.013535791
+  - 0.0032366137
+  - 0.0055082412
+  - 0.00049865496
+  - 0.0022022398
+  - 0.009608253
+  - 0.018750865
+  - 0.004261153
+  - 0.006713069
+  - 0.007636151
+  - 0.008258539
+  - 0.0250466
+  - 0.0292893
+  - 0.01189268
+  - 0.02999804
+  - 0.030298587
+  - 0.01709299
+  - 0.010726063
+  - 0.016398013
+  - 0.004346465
+  - 0.009458896
+  - 0.037539702
+  - 0.013464896
+  - 0.03023237
+  - 0.06516454
+  - 0.03679815
+  - 0.049161423
+  - 0.05431952
+  - 0.11325959
+  - 0.10947994
+  - 0.094096184
+  - 0.09874525
+  - 0.17262034
+  - 0.10208249
+  - 0.16401482
+  - 0.043709148
+  - 0.01960967
+  - 0.2057884
+  - 0.013594499
+  - 0.12648672
+  - 0.18198195
+  - 0.31287158
+  - 0.014991716
+  - 0.09212224
+  - 0.17351559
+  - 0.4393079
+  - 0.2008768
+  - 0.59559566
+  - 0.28942695
+  - 0.31745726
+  - 0.69604236
+  - 0.19435097
+  - 0.37848046
+  - 0.059061434
+  - 0.7707829
+  - 0.49015605
+  - 0.32176656
+  - 0.9392937
+  - 0.25547108
+  - 0.17277889
+  - 0.03408412
+  - 0.014694505
+  - 0.8648579
+  - 1.3993132
+  - 0.43497753
+  - 1.6968768
+  - 0.86110926
+  - 0.4145469
+  - 1.9915252
+  - 1.0152823
+  - 0.37316477
+  - 2.7755322
+  - 1.4003026
+  - 2.7176504
+  - 2.7125726
+  - 0.75725925
+  - 1.8408805
+  - 3.3016963
+  - 2.877528
+  - 1.3501508
+  - 0.94692993
+  - 3.2173955
+  - 2.1955569
+  - 2.131045
   _angleDegs:
   - -76.85815
   - -50.253593

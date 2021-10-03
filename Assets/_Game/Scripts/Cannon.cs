@@ -51,7 +51,7 @@ public class Cannon : MonoBehaviour
 
         cannonballRigidbody.AddForce(Vector3.left * m_cannonballForce, ForceMode.Impulse);
         Destroy(cb, 5f);
-        m_rigidbody.AddForce(Vector3.right * m_cannonballForce * Random.Range(3, 4), ForceMode.Impulse);
+        m_rigidbody.AddForce(Vector3.right * m_cannonballForce * Random.Range(10, 15), ForceMode.Impulse);
         m_particleShoot.Play();
     }
 }
