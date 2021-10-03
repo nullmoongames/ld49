@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8831586370209726758}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: SP_01 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 3358904613522641405}
   - component: {fileID: 4884313420147522060}
   - component: {fileID: 5317630507997833342}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: MESH_BaseMat003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -135,7 +135,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6678749948257136103}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: SP_01 (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -165,7 +165,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8072794019939461587}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: SP_01 (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -195,7 +195,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5433055026676383749}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: SP_01 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -225,7 +225,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 286648247729674148}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: SP_01 (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -255,7 +255,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3372741027227816573}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: SP_01 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -285,7 +285,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8900304805431824890}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: SP_01 (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -315,7 +315,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7548396566354552740}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: SP_01 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -345,7 +345,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2837100438533122041}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: SP_01 (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -375,7 +375,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3743598680213102732}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: SP_01 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -405,7 +405,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5074663302399528158}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: SP_01 (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -435,7 +435,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3331636917040386921}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: SP_01 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -563,7 +563,7 @@ GameObject:
   - component: {fileID: 3828020297156105448}
   - component: {fileID: 754936747833962305}
   - component: {fileID: 6547652089319035057}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: MESH_Mat004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -657,7 +657,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5205404217096902782}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: SP_01 (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -687,7 +687,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8736180603245838384}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: SP_01 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -717,7 +717,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4319723746847042222}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: SP_01 (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -747,7 +747,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5020977267320904130}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: SP_01 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -777,7 +777,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2504807179732106973}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: EndPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -810,7 +810,7 @@ GameObject:
   - component: {fileID: 7924174115783094380}
   - component: {fileID: 1988631484615380417}
   - component: {fileID: 1854598239204455226}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Boat 01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -851,29 +851,29 @@ MonoBehaviour:
   _centerOfMass: {x: 0, y: 12, z: 45}
   _forcePoints:
   - _weight: 1
-    _offsetPosition: {x: -15, y: 0, z: 90}
+    _offsetPosition: {x: -10, y: 0, z: 90}
   - _weight: 1
     _offsetPosition: {x: 0, y: 0, z: 90}
   - _weight: 1
-    _offsetPosition: {x: 15, y: 0, z: 90}
+    _offsetPosition: {x: 10, y: 0, z: 90}
   - _weight: 1
-    _offsetPosition: {x: -15, y: 0, z: 60}
+    _offsetPosition: {x: -10, y: 0, z: 60}
   - _weight: 1
     _offsetPosition: {x: 0, y: 0, z: 60}
   - _weight: 1
-    _offsetPosition: {x: 15, y: 0, z: 60}
+    _offsetPosition: {x: 10, y: 0, z: 60}
   - _weight: 1
-    _offsetPosition: {x: -15, y: 0, z: 30}
+    _offsetPosition: {x: -10, y: 0, z: 30}
   - _weight: 1
-    _offsetPosition: {x: 15, y: 0, z: 30}
+    _offsetPosition: {x: 10, y: 0, z: 30}
   - _weight: 1
     _offsetPosition: {x: 0, y: 0, z: 30}
   - _weight: 1
-    _offsetPosition: {x: -15, y: 0, z: 0}
+    _offsetPosition: {x: -10, y: 0, z: 0}
   - _weight: 1
     _offsetPosition: {x: 0, y: 0, z: 0}
   - _weight: 1
-    _offsetPosition: {x: 15, y: 0, z: 0}
+    _offsetPosition: {x: 10, y: 0, z: 0}
   _forceHeightOffset: 0
   _forceMultiplier: 6
   _minSpatialLength: 90
@@ -997,8 +997,8 @@ MonoBehaviour:
   - {fileID: 4202959431547033998}
   - {fileID: 1272432269789656188}
   - {fileID: 2170594852325113183}
-  heightConsideringBoatIsBug: 50
-  rotationConsideringBoatIsBug: {x: 10, y: 15, z: 40}
+  heightConsideringBoatIsBug: 10
+  rotationConsideringBoatIsBug: {x: -15, y: 15, z: 40}
 --- !u!1 &2746091519844549682
 GameObject:
   m_ObjectHideFlags: 0
@@ -1008,7 +1008,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 537465506193111641}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: SP_01 (20)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1038,7 +1038,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2803924784412954233}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: SP_01 (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1164,7 +1164,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5927596079195638128}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: SP_01 (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1194,7 +1194,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8347369284822063835}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Ocean_Props
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1251,7 +1251,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4202959431547033998}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: SP_01 (24)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1281,7 +1281,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4669679524175273396}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: SP_01 (22)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1314,7 +1314,7 @@ GameObject:
   - component: {fileID: 6669767227150661630}
   - component: {fileID: 8454685242658139037}
   - component: {fileID: 6547652089321477557}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: MESH_Mat003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1411,7 +1411,7 @@ GameObject:
   - component: {fileID: 4881305579591468672}
   - component: {fileID: 3040948280654819697}
   - component: {fileID: 6547652089738595570}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: MESH_Mat002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1505,7 +1505,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 80943195034701207}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: SP_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1538,7 +1538,7 @@ GameObject:
   - component: {fileID: 2658055941265124403}
   - component: {fileID: 6208456279784230525}
   - component: {fileID: 4269406232170561084}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: MESH_BaseMat002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1714,7 +1714,7 @@ GameObject:
   - component: {fileID: 510335966266872144}
   - component: {fileID: 2981143048450133823}
   - component: {fileID: 3253359730626691737}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: MESH_VoilesEtCordages003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1793,7 +1793,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1959911332549430169}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: SP_01 (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1823,7 +1823,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2170594852325113183}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: SP_01 (26)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1853,7 +1853,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1320475433331342053}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: SP_01 (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1883,7 +1883,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8065447218759468906}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: SP_01 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1913,7 +1913,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7399189321510339533}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Boat_Props
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2044,7 +2044,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6548496665680971960}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: SP_01 (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2077,7 +2077,7 @@ GameObject:
   - component: {fileID: 8484808864014541421}
   - component: {fileID: 4232069703996813147}
   - component: {fileID: 6547652088059208695}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Box001MESH_CabineCapitaine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2170,7 +2170,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9097028986488979086}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: SP_01 (23)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2200,7 +2200,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6725940909870339890}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: MESH_Bateau_Shorted
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2247,7 +2247,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 398165661741937838}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: SP_01 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2277,7 +2277,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7022433615489259239}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: SP_01 (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2307,7 +2307,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 811524098584280758}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: SP_01 (21)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2337,7 +2337,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6728690385493224983}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: SP_01 (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2369,7 +2369,7 @@ GameObject:
   - component: {fileID: 6547652088106149226}
   - component: {fileID: 6547652088106149205}
   - component: {fileID: 6547652088106149204}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: MESH_Coque (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2448,7 +2448,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2008865016813743734}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: SP_01 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2478,7 +2478,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9024696648987491995}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: SP_01 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2508,7 +2508,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7498918247816350882}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: SP_01 (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2540,7 +2540,7 @@ GameObject:
   - component: {fileID: 1099116537911513299}
   - component: {fileID: 3549288850862939652}
   - component: {fileID: 6535671697979155278}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: MESH_VoilesEtCordages004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2619,7 +2619,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6124157465723749226}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: SP_01 (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2730,7 +2730,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 103981001608237648}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: SP_01 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2760,7 +2760,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8020908421351537459}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: SP_01 (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2790,7 +2790,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5577251904516236119}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: SP_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2820,7 +2820,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9216693048787147357}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: SP_01 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2850,7 +2850,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4398409978535285780}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: SP_01 (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2880,7 +2880,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7262626333244862146}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: SP_01 (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2914,7 +2914,7 @@ GameObject:
   - component: {fileID: 6318557134604852167}
   - component: {fileID: 6547652088979201774}
   - component: {fileID: 6547652088979201775}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: "MESH_BArri\xE8re"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3021,7 +3021,7 @@ GameObject:
   - component: {fileID: 2781132801420650250}
   - component: {fileID: 4228505736606283838}
   - component: {fileID: 8096488450269980710}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: MESH_Grille01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3103,7 +3103,7 @@ GameObject:
   - component: {fileID: 2360908961504268184}
   - component: {fileID: 2002449067557817996}
   - component: {fileID: 2834008169642806562}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: MESH_BaseMat004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3196,7 +3196,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2076888794481402231}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: SP_01 (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3229,7 +3229,7 @@ GameObject:
   - component: {fileID: 5233489695153720261}
   - component: {fileID: 631171061170246487}
   - component: {fileID: 6547652088559516709}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: MESH_EmplacementBarre
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3322,7 +3322,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1272432269789656188}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: SP_01 (25)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3353,7 +3353,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7213830992381745536}
   - component: {fileID: 5738196579039689480}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Boat Enter Collision
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3396,7 +3396,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4106455384105069408}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: SP_01 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3426,7 +3426,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5826700438005170203}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: SP_01 (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3458,7 +3458,7 @@ GameObject:
   - component: {fileID: 4916975451594451686}
   - component: {fileID: 6942189113589638230}
   - component: {fileID: 2650669246592825081}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: MESH_Grille00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3539,7 +3539,7 @@ GameObject:
   - component: {fileID: 3683738944898993747}
   - component: {fileID: 8291874923555004569}
   - component: {fileID: 4464876619398343287}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: MESH_VoilesEtCordages002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3618,7 +3618,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3605059160115056345}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: SP_01 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

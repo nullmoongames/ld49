@@ -70,15 +70,6 @@ public class BoatChaosManager : MonoBehaviour
         //DEBUG
         _fixedBoatRot = transform.eulerAngles;
 
-        //if(transform.position.x < 0)
-        //{
-        //    Debug.Log("A");
-        //}
-        //else
-        //{
-        //    Debug.Log("B");
-        //}
-
         if (transform.position.y >= heightConsideringBoatIsBug)
         {
             rb.velocity = Vector3.zero;
@@ -93,17 +84,32 @@ public class BoatChaosManager : MonoBehaviour
         }
 
         if(transform.rotation.x < -rotationConsideringBoatIsBug.x)
+        {
+            Debug.Log("-X is bug");
             _fixedBoatRot.x = 0;
+        }
 
-        if (transform.rotation.y > rotationConsideringBoatIsBug.y || transform.rotation.y < -rotationConsideringBoatIsBug.y)
+        if (transform.rotation.y > rotationConsideringBoatIsBug.y)
         {
             Debug.Log("Y is bug");
             _fixedBoatRot.y = 0;
         }
 
-        if (transform.rotation.z > rotationConsideringBoatIsBug.z || transform.rotation.z < -rotationConsideringBoatIsBug.z)
+        if (transform.rotation.y < -rotationConsideringBoatIsBug.y)
+        {
+            Debug.Log("-Y is bug");
+            _fixedBoatRot.y = 0;
+        }
+
+        if (transform.rotation.z > rotationConsideringBoatIsBug.z)
         {
             Debug.Log("Z is bug");
+            _fixedBoatRot.z = 0;
+        }
+
+        if(transform.rotation.z < -rotationConsideringBoatIsBug.z)
+        {
+            Debug.Log("-Z is bug");
             _fixedBoatRot.z = 0;
         }
 
