@@ -62,6 +62,7 @@ public class PlayerController : MonoBehaviour
     private float m_inputX;
     private bool m_isGrounded;
     private float m_rigidbodyMass;
+    private float forwardMultiplier = 1f;
 
     private void Awake()
     {
@@ -92,7 +93,6 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         float multiplier = m_isGrounded ? 1f : m_inAirMovementMultiplier;
-        float forwardMultiplier = 1f;
         Vector3 velocity = m_rigidbody.velocity;
 
         Collider[] colliders = Physics.OverlapSphere(m_groundCheck.position, m_groundCheckRadius, m_groundCheckLayers);
@@ -105,20 +105,7 @@ public class PlayerController : MonoBehaviour
             {
                 if (collider.CompareTag("SpeedBoost"))
                 {
-                    forwardMultiplier = 10f;
-                    if(m_speedVFX.aliveParticleCount < 1)
-                        m_speedVFX.Play();
-                    m_speedVFX.playRate = 3f;
-
-                    if(!m_speedBoostAudioSource.isPlaying)
-                    {
-                        m_speedBoostAudioSource.pitch = Random.Range(.8f, 1.2f);
-                        m_speedBoostAudioSource.Play();
-                    }
-                }
-                else
-                {
-                    m_speedVFX.Stop();
+                    StartSpeedBoost();
                 }
             }
         }
@@ -157,13 +144,19 @@ public class PlayerController : MonoBehaviour
         }
         else if (other.gameObject.layer == LayerMask.NameToLayer("Boat"))
             GameEventController.instance.NewEntryBoat(other.transform.parent);
+        else if(other.gameObject.layer == LayerMask.NameToLayer("SpeedBoost"))
+        {
+            StartSpeedBoost();
+            Destroy(other.gameObject, 0.01f);
+        }
     }
 
     private void OnCollisionEnter(Collision collision)
     {
         if(collision.collider.CompareTag("Obstacle"))
         {
-            //Stun anim
+            m_animator.SetTrigger("Stunned");
+
             m_cinemachineImpulseSource.GenerateImpulse(Vector3.one);
 
             m_ImpactAudioSource.pitch = Random.Range(1f, 1.5f);
@@ -194,6 +187,29 @@ public class PlayerController : MonoBehaviour
         m_animator.SetFloat("VelocityY", m_rigidbody.velocity.y);
         m_animator.SetBool("Grounded", m_isGrounded);
     }
+
+    private void StartSpeedBoost()
+    {
+        forwardMultiplier = 10f;
+        if (m_speedVFX.aliveParticleCount < 1)
+            m_speedVFX.Play();
+        m_speedVFX.playRate = 3f;
+
+        if (!m_speedBoostAudioSource.isPlaying)
+        {
+            m_speedBoostAudioSource.pitch = Random.Range(.8f, 1.2f);
+            m_speedBoostAudioSource.Play();
+        }
+
+        Invoke("StopSpeedBoost", 2f);
+    }
+
+    private void StopSpeedBoost()
+    {
+        m_speedVFX.Stop();
+        forwardMultiplier = 1f;
+    }
+
     #region DEBUG
     private void OnDrawGizmos()
     {

@@ -18,6 +18,13 @@ public class PlayerAnimatorFunctions : MonoBehaviour
     [SerializeField]
     AudioSource m_jumpAudioSource;
 
+    Animator m_animator;
+
+    private void Awake()
+    {
+        m_animator = GetComponent<Animator>();
+    }
+
     public void Footstep(string side)
     {
         GameObject ps;
