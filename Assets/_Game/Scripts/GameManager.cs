@@ -7,25 +7,27 @@ using Cinemachine;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager instance;
-
-    public int distanceCover = 0; //Score
-
+    [Header("Score")]
+    public int distanceCover = 0;
+    public TMP_Text scoreText;
     private float highscore;
 
-    private Transform _player;
-    private Vector3 _playerStartingPos;
-
-    private bool _gameIsPlaying;
-
-    public TMP_Text scoreText;
-
+    [Header("UI Menu")]
     public CanvasGroup gameUI;
-    public CanvasGroup blurMainMenuUI;
     public CanvasGroup mainMenuUI;
     public CanvasGroup deathMenuUI;
-
     public CinemachineVirtualCamera mainMenuCam;
+
+    [Header("Chaos")]
+    public float chaosPercent;
+
+    //Reload Management
+    private Transform _player;
+    private Vector3 _playerStartingPos;
+    private bool _gameIsPlaying;
+
+    //Instance
+    public static GameManager instance;
 
     private void Awake()
     {
@@ -44,6 +46,7 @@ public class GameManager : MonoBehaviour
             return;
 
         _UpdatePlayerMeters();
+        _UpdateChaosPercent();
     }
 
     public void ReloadLevel()
@@ -63,6 +66,14 @@ public class GameManager : MonoBehaviour
             scoreText.text = "<b>" + distanceCover + "</b>m";
             distanceCover = (int)_player.transform.position.z;
         }
+    }
+
+    void _UpdateChaosPercent()
+    {
+        if (chaosPercent < 100)
+            chaosPercent = (distanceCover / 1000);
+        else
+            chaosPercent = 100;
     }
 
     public void Play() 
@@ -92,7 +103,7 @@ public class GameManager : MonoBehaviour
         mainMenuCam.Priority = 0;
         gameUI.DOFade(1, .5f);
         mainMenuUI.DOFade(0, .5f);
-        blurMainMenuUI.DOFade(0, .5f);
+        //blurMainMenuUI.DOFade(0, .5f);
         deathMenuUI.DOFade(0, .5f);
 
     }
@@ -101,7 +112,7 @@ public class GameManager : MonoBehaviour
     {
         gameUI.DOFade(0, .5f);
         mainMenuUI.DOFade(1, .5f);
-        blurMainMenuUI.DOFade(1, .5f);
+        //blurMainMenuUI.DOFade(1, .5f);
         deathMenuUI.DOFade(0, .5f);
         mainMenuCam.Priority = 3;
     }
@@ -110,7 +121,7 @@ public class GameManager : MonoBehaviour
     {
         gameUI.DOFade(0, .5f);
         mainMenuUI.DOFade(0, .5f);
-        blurMainMenuUI.DOFade(0, .5f);
+        //blurMainMenuUI.DOFade(0, .5f);
         deathMenuUI.DOFade(1, .5f);
         mainMenuCam.Priority = 0;
     }
