@@ -30,7 +30,7 @@ public class LevelGenerationManager : MonoBehaviour
         StartLevelGeneration();
     }
 
-    void _NewGeneration()
+    void _NewMultipleGeneration()
     {
         for(int i = 0; i < generatedBoatCountEachCycle; i++)
         {
@@ -38,6 +38,18 @@ public class LevelGenerationManager : MonoBehaviour
             generatedBoats.Add(boat);
             _lastGeneratedBoat = boat.transform;
         }
+    }
+
+    void _NewSingleGeneration()
+    {
+        GameObject boat = Instantiate(_GetRandomBoat(), _GetInstiantiationPosition(_lastGeneratedBoat.GetChild(0).position), Quaternion.identity);
+        generatedBoats.Add(boat);
+        _lastGeneratedBoat = boat.transform;
+    }
+
+    public void NewSingleGeneration()
+    {
+        _NewSingleGeneration();
     }
 
     GameObject _GetRandomBoat()
@@ -70,6 +82,6 @@ public class LevelGenerationManager : MonoBehaviour
     {
         _lastGeneratedBoat = GameEventController.instance.GetStartingBoat();
 
-        _NewGeneration();
+        _NewMultipleGeneration();
     }
 }

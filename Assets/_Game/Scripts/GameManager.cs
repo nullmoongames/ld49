@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using DG.Tweening;
 using Cinemachine;
+using THOR;
 
 public class GameManager : MonoBehaviour
 {
@@ -20,6 +21,7 @@ public class GameManager : MonoBehaviour
 
     [Header("Chaos")]
     public float chaosPercent;
+    public THOR_Thunderstorm thunder;
 
     //Reload Management
     private Transform _player;
@@ -47,6 +49,12 @@ public class GameManager : MonoBehaviour
 
         _UpdatePlayerMeters();
         _UpdateChaosPercent();
+        _UpdateChaos();
+    }
+
+    void _UpdateChaos() 
+    {
+        thunder.probability = (chaosPercent / 100);
     }
 
     public void ReloadLevel()
@@ -71,7 +79,7 @@ public class GameManager : MonoBehaviour
     void _UpdateChaosPercent()
     {
         if (chaosPercent < 100)
-            chaosPercent = (distanceCover / 1000);
+            chaosPercent = (distanceCover / 50);
         else
             chaosPercent = 100;
     }
