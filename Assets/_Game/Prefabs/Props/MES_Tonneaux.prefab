@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 647668785357819854}
   - component: {fileID: 2251077391495336821}
   - component: {fileID: 2251077391495336820}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: MES_Tonneaux
   m_TagString: Obstacle
   m_Icon: {fileID: 0}

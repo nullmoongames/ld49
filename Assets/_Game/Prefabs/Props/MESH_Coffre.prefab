@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2276861578314056997}
   - component: {fileID: 601402259092669504}
   - component: {fileID: 601402259092669511}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: MESH_Coffre
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
