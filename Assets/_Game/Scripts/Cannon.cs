@@ -41,7 +41,6 @@ public class Cannon : MonoBehaviour
             m_cannonballAudioSource.pitch = Random.Range(.8f, 1.2f);
             m_cannonballAudioSource.Play();
         }
-
     }
 
     void ShootCannonball()

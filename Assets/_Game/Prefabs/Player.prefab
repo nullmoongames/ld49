@@ -151,7 +151,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 755292272}
-  m_LocalRotation: {x: 1.071392e-10, y: 0.99875855, z: -0.0498137, w: 0.000000002148128}
+  m_LocalRotation: {x: -1.0713917e-10, y: 0.99875855, z: -0.0498137, w: -0.0000000021481275}
   m_LocalPosition: {x: 0, y: 6, z: 20}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -818,6 +818,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   m_animator: {fileID: 5261708173576338333}
+  m_pirateRunnerMesh: {fileID: 128785248635987992}
   m_moveAcceleration: 1000
   m_maxSpeed: 100
   m_inAirMovementMultiplier: 0.5

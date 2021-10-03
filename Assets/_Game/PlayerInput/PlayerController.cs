@@ -25,6 +25,8 @@ public class PlayerController : MonoBehaviour
     private LayerMask m_frontCheckLayerMask;
     [SerializeField]
     Animator m_animator;
+    [SerializeField]
+    Transform m_pirateRunnerMesh;
 
     [Header("Left/Right movement")]
     [SerializeField]
@@ -65,7 +67,6 @@ public class PlayerController : MonoBehaviour
     private bool m_isGrounded;
     private float m_rigidbodyMass;
     private float forwardMultiplier = 1f;
-    private float m_ouchTimer;
 
     private void Awake()
     {
@@ -92,10 +93,9 @@ public class PlayerController : MonoBehaviour
         m_inputX = m_inputActions.Gameplay.Move.ReadValue<Vector2>().x;
         UpdateAnimator();
 
-        if(m_ouchTimer > 0)
-        {
-            m_ouchTimer -= Time.deltaTime;
-        }
+        Vector3 angles = m_pirateRunnerMesh.eulerAngles;
+        angles.y = 24 * m_inputX;
+        m_pirateRunnerMesh.eulerAngles = angles;
     }
 
     private void FixedUpdate()
@@ -124,6 +124,7 @@ public class PlayerController : MonoBehaviour
 
         if (Mathf.Abs(m_rigidbody.velocity.x) < m_maxSpeed)
             m_rigidbody.AddForce(transform.right * m_moveAcceleration * m_rigidbodyMass * m_inputX * multiplier * Time.fixedDeltaTime, ForceMode.Acceleration);
+
 
         if (m_rigidbody.velocity.z < m_maxRunSpeed)
         {
