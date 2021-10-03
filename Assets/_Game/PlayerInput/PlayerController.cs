@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using UnityEngine.VFX;
+using Cinemachine;
 
 public class PlayerController : MonoBehaviour
 {
@@ -48,6 +49,8 @@ public class PlayerController : MonoBehaviour
     [Header("VFX")]
     [SerializeField]
     private VisualEffect m_speedVFX;
+    [SerializeField]
+    private CinemachineImpulseSource m_cinemachineImpulseSource;
 
     [HideInInspector]
     public PlayerInputActions m_inputActions;
@@ -143,6 +146,15 @@ public class PlayerController : MonoBehaviour
 
         if (other.gameObject.layer == LayerMask.NameToLayer("Boat"))
             GameEventController.instance.NewEntryBoat(other.transform.parent);
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.collider.CompareTag("Obstacle"))
+        {
+            //Stun anim
+            m_cinemachineImpulseSource.GenerateImpulse(Vector3.one);
+        }
     }
 
     private void Jump()
