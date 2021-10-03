@@ -719,7 +719,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1747595938316721445}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 28.299995, z: 299.91}
+  m_LocalPosition: {x: 0, y: 7.78, z: 299.91}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1747595938382586349}
@@ -734,7 +734,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1747595938382586349}
-  - component: {fileID: 6303416302888784789}
   - component: {fileID: 2385606153697979960}
   - component: {fileID: 2539663644582973635}
   - component: {fileID: -2935075887254212872}
@@ -764,56 +763,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6303416302888784789
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1747595938382586350}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebb499a376b0c094f92b8f70c0966934, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _centerOfMass: {x: 0, y: -30, z: 135}
-  _forcePoints:
-  - _weight: 1
-    _offsetPosition: {x: -30, y: 0, z: 270}
-  - _weight: 1
-    _offsetPosition: {x: 0, y: 0, z: 270}
-  - _weight: 1
-    _offsetPosition: {x: 30, y: 0, z: 270}
-  - _weight: 1
-    _offsetPosition: {x: -30, y: 0, z: 180}
-  - _weight: 1
-    _offsetPosition: {x: 0, y: 0, z: 180}
-  - _weight: 1
-    _offsetPosition: {x: 30, y: 0, z: 180}
-  - _weight: 1
-    _offsetPosition: {x: -30, y: 0, z: 90}
-  - _weight: 1
-    _offsetPosition: {x: 30, y: 0, z: 90}
-  - _weight: 1
-    _offsetPosition: {x: 0, y: 0, z: 90}
-  - _weight: 1
-    _offsetPosition: {x: -30, y: 0, z: 0}
-  - _weight: 1
-    _offsetPosition: {x: 0, y: 0, z: 0}
-  - _weight: 1
-    _offsetPosition: {x: 30, y: 0, z: 0}
-  _forceHeightOffset: 0
-  _forceMultiplier: 6
-  _minSpatialLength: 90
-  _turningHeel: 0.35
-  _dragInWaterUp: 0
-  _dragInWaterRight: 1
-  _dragInWaterForward: 0
-  _enginePower: 0
-  _turnPower: 0
-  _playerControlled: 0
-  _engineBias: 0
-  _turnBias: 0
 --- !u!54 &2385606153697979960
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -846,7 +795,7 @@ MonoBehaviour:
   - propVariant:
     - {fileID: 7302162258992824483, guid: ae74aa401dc4ff344b09cdb0c61fac05, type: 3}
     attachedToParent: 1
-    minimumChaosRequiredToSpawn: 33
+    minimumChaosRequiredToSpawn: 0
     maximumChaosRequiredToSpawn: 100
   - propVariant:
     - {fileID: 90060630273602444, guid: 8292c4b8d826dda4c86e3a2c1168907a, type: 3}
@@ -913,6 +862,11 @@ MonoBehaviour:
     - {fileID: 100000, guid: e169bd13f37509046ae97d918a0a22fe, type: 3}
     attachedToParent: 1
     minimumChaosRequiredToSpawn: 50
+    maximumChaosRequiredToSpawn: 100
+  - propVariant:
+    - {fileID: 100000, guid: c7d295a127617b34d86a1418089324ed, type: 3}
+    attachedToParent: 1
+    minimumChaosRequiredToSpawn: 0
     maximumChaosRequiredToSpawn: 100
   boatPropSpawnPoints:
   - {fileID: 8639039788315345070}

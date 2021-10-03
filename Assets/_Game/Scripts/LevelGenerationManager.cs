@@ -14,8 +14,8 @@ public class LevelGenerationManager : MonoBehaviour
     public float passedBoatDestroyedDistance;
 
     [Space(20)]
-    [UnityEngine.Range(0, 100)] public float forwardMinDistBetweenBoats;
-    [UnityEngine.Range(0, 100)] public float forwardMaxDistBetweenBoats;
+    [UnityEngine.Range(0, 300)] public float forwardMinDistBetweenBoats;
+    [UnityEngine.Range(0, 300)] public float forwardMaxDistBetweenBoats;
     [UnityEngine.Range(-30, 30)] public float sideMinDistBetweenBoats, sideMaxDistBetweenBoats;
     [UnityEngine.Range(-30, 30)] public float upMinDistBetweenBoats, upMaxDistBetweenBoats;
 

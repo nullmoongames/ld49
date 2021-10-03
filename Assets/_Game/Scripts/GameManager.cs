@@ -32,10 +32,13 @@ public class GameManager : MonoBehaviour
     public float startWavesMultiplier = 1f;
     public float maxWavesMultiplier = 1.5f;
 
+    [Header("Reload")]
     //Reload Management
     private Transform _player;
     private Vector3 _playerStartingPos;
     private bool _gameIsPlaying;
+    public Transform fire;
+    private Vector3 _startFirePos;
 
     //Instance
     public static GameManager instance;
@@ -45,6 +48,8 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         instance = this;
+
+        _startFirePos = fire.transform.position;
 
         _startingLightColor = mainLight.color;
         _startingLightIntensity = mainLight.intensity;
@@ -89,6 +94,7 @@ public class GameManager : MonoBehaviour
         mainLight.intensity = _startingLightIntensity;
         thunder.probability = 0;
         chaosPercent = 0;
+        fire.transform.position = _startFirePos;
     }
 
     void _UpdatePlayerMeters() 
