@@ -25,6 +25,8 @@ public class GameplayMusic : MonoBehaviour
             _Instance = this;
             DontDestroyOnLoad(this);
         }
+
+        m_audioSource = GetComponent<AudioSource>();
     }
 
     public void SwitchToGameplayMusic()
