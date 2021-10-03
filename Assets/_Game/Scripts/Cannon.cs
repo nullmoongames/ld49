@@ -16,6 +16,8 @@ public class Cannon : MonoBehaviour
     float m_maxWaitTime = 5f;
     [SerializeField]
     float m_cannonballForce = 20f;
+    [SerializeField]
+    AudioSource m_cannonballAudioSource;
 
     private float m_timer;
 
@@ -32,6 +34,9 @@ public class Cannon : MonoBehaviour
         {
             ShootCannonball();
             m_timer = Random.Range(m_minWaitTime, m_maxWaitTime);
+
+            m_cannonballAudioSource.pitch = Random.Range(.8f, 1.2f);
+            m_cannonballAudioSource.Play();
         }
 
     }
