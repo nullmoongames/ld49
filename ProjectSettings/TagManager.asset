@@ -8,6 +8,7 @@ TagManager:
   - FrontCheck
   - SpeedBoost
   - Obstacle
+  - StartingBoat
   layers:
   - Default
   - TransparentFX

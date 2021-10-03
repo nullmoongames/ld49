@@ -43,7 +43,7 @@ public class BoatChaosManager : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
 
-        //StartCoroutine(SpawnProps());
+        StartCoroutine(SpawnProps());
     }
 
     IEnumerator SpawnProps()
