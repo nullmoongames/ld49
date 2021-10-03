@@ -42,6 +42,8 @@ public class LevelGenerationManager : MonoBehaviour
 
     void _NewSingleGeneration()
     {
+        Debug.Log("New boat");
+
         GameObject boat = Instantiate(_GetRandomBoat(), _GetInstiantiationPosition(_lastGeneratedBoat.GetChild(0).position), Quaternion.identity);
         generatedBoats.Add(boat);
         _lastGeneratedBoat = boat.transform;

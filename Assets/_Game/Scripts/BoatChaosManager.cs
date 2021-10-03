@@ -43,7 +43,7 @@ public class BoatChaosManager : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
 
-        StartCoroutine(SpawnProps());
+        //StartCoroutine(SpawnProps());
     }
 
     IEnumerator SpawnProps()
@@ -57,9 +57,7 @@ public class BoatChaosManager : MonoBehaviour
         {
             float chance = Random.Range((GameManager.instance.chaosPercent / 100), 1);
 
-            Debug.Log("Chance :" + chance);
-
-            if (chance > 0.20f) 
+            if (chance > 0.20f)
             {
                 int rr = Random.Range(0, boatProps.Count);
 
