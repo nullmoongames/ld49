@@ -24,6 +24,8 @@ public class GameManager : MonoBehaviour
     public THOR_Thunderstorm thunder;
     public Light mainLight;
     private float _startingLightIntensity;
+    public Color chaosLightColor;
+    private Color _startingLightColor;
 
     //Reload Management
     private Transform _player;
@@ -37,6 +39,7 @@ public class GameManager : MonoBehaviour
     {
         instance = this;
 
+        _startingLightColor = mainLight.color;
         _startingLightIntensity = mainLight.intensity;
 
         _player = FindObjectOfType<PlayerController>().transform;
@@ -60,6 +63,7 @@ public class GameManager : MonoBehaviour
     {
         thunder.probability = (chaosPercent / 100);
         mainLight.intensity = (_startingLightIntensity - (chaosPercent / 100));
+        mainLight.color = Color.Lerp(_startingLightColor, chaosLightColor, (chaosPercent / 100));
     }
 
     public void ReloadLevel()
