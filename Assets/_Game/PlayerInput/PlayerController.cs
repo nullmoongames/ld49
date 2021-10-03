@@ -46,11 +46,13 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private float m_runAcceleration = 5f;
 
-    [Header("VFX")]
+    [Header("VFX/SFX")]
     [SerializeField]
     private VisualEffect m_speedVFX;
     [SerializeField]
     private CinemachineImpulseSource m_cinemachineImpulseSource;
+    [SerializeField]
+    private AudioSource m_speedBoostAudioSource;
 
     [HideInInspector]
     public PlayerInputActions m_inputActions;
@@ -105,6 +107,12 @@ public class PlayerController : MonoBehaviour
                     if(m_speedVFX.aliveParticleCount < 1)
                         m_speedVFX.Play();
                     m_speedVFX.playRate = 3f;
+
+                    if(!m_speedBoostAudioSource.isPlaying)
+                    {
+                        m_speedBoostAudioSource.pitch = Random.Range(.8f, 1.2f);
+                        m_speedBoostAudioSource.Play();
+                    }
                 }
                 else
                 {
