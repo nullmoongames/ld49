@@ -34,7 +34,10 @@ public class LevelGenerationManager : MonoBehaviour
     {
         for(int i = 0; i < generatedBoatCountEachCycle; i++)
         {
-            GameObject boat = Instantiate(_GetRandomBoat(), _GetInstiantiationPosition(_lastGeneratedBoat.GetChild(0).position), Quaternion.identity);
+            Vector3 newPos = _lastGeneratedBoat.GetChild(0).position;
+            newPos.y = 0;
+
+            GameObject boat = Instantiate(_GetRandomBoat(), _GetInstiantiationPosition(newPos), Quaternion.identity);
             generatedBoats.Add(boat);
             _lastGeneratedBoat = boat.transform;
         }
@@ -43,8 +46,10 @@ public class LevelGenerationManager : MonoBehaviour
     void _NewSingleGeneration()
     {
         Debug.Log("New boat");
+        Vector3 newPos = _lastGeneratedBoat.GetChild(0).position;
+        newPos.y = 0;
 
-        GameObject boat = Instantiate(_GetRandomBoat(), _GetInstiantiationPosition(_lastGeneratedBoat.GetChild(0).position), Quaternion.identity);
+        GameObject boat = Instantiate(_GetRandomBoat(), _GetInstiantiationPosition(newPos), Quaternion.identity);
         generatedBoats.Add(boat);
         _lastGeneratedBoat = boat.transform;
     }
