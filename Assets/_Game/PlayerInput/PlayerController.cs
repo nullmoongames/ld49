@@ -25,6 +25,8 @@ public class PlayerController : MonoBehaviour
     private LayerMask m_frontCheckLayerMask;
     [SerializeField]
     Animator m_animator;
+    [SerializeField]
+    Transform m_pirateRunnerMesh;
 
     [Header("Left/Right movement")]
     [SerializeField]
@@ -55,6 +57,8 @@ public class PlayerController : MonoBehaviour
     private AudioSource m_speedBoostAudioSource;
     [SerializeField]
     private AudioSource m_ImpactAudioSource;
+    [SerializeField]
+    private AudioSource m_ouchAudioSource;
 
     [HideInInspector]
     public PlayerInputActions m_inputActions;
@@ -88,6 +92,10 @@ public class PlayerController : MonoBehaviour
     {
         m_inputX = m_inputActions.Gameplay.Move.ReadValue<Vector2>().x;
         UpdateAnimator();
+
+        Vector3 angles = m_pirateRunnerMesh.eulerAngles;
+        angles.y = 24 * m_inputX;
+        m_pirateRunnerMesh.eulerAngles = angles;
     }
 
     private void FixedUpdate()
@@ -116,6 +124,7 @@ public class PlayerController : MonoBehaviour
 
         if (Mathf.Abs(m_rigidbody.velocity.x) < m_maxSpeed)
             m_rigidbody.AddForce(transform.right * m_moveAcceleration * m_rigidbodyMass * m_inputX * multiplier * Time.fixedDeltaTime, ForceMode.Acceleration);
+
 
         if (m_rigidbody.velocity.z < m_maxRunSpeed)
         {
@@ -159,6 +168,7 @@ public class PlayerController : MonoBehaviour
 
             m_cinemachineImpulseSource.GenerateImpulse(Vector3.one);
 
+            m_ouchAudioSource.Play();
             m_ImpactAudioSource.pitch = Random.Range(1f, 1.5f);
             m_ImpactAudioSource.Play();
         }
