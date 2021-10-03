@@ -22,6 +22,8 @@ public class GameManager : MonoBehaviour
     [Header("Chaos")]
     public float chaosPercent;
     public THOR_Thunderstorm thunder;
+    public Light mainLight;
+    private float _startingLightIntensity;
 
     //Reload Management
     private Transform _player;
@@ -34,6 +36,8 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         instance = this;
+
+        _startingLightIntensity = mainLight.intensity;
 
         _player = FindObjectOfType<PlayerController>().transform;
         _player.gameObject.SetActive(false);
@@ -55,6 +59,7 @@ public class GameManager : MonoBehaviour
     void _UpdateChaos() 
     {
         thunder.probability = (chaosPercent / 100);
+        mainLight.intensity = (_startingLightIntensity - (chaosPercent / 100));
     }
 
     public void ReloadLevel()
