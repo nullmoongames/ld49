@@ -22,11 +22,8 @@ public class GameEventController : MonoBehaviour
     public void DeathEvent()
     {
         GameManager.instance.ReloadLevel();
+        GameManager.instance.SaveHighscore();
         ReloadOcean();
-        //DEATH UI
-        //TITTLE SCREEN
-        //PLAY AGAIN
-        //QUIT
     }
 
     public void ReloadOcean()

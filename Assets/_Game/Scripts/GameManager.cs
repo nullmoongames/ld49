@@ -80,7 +80,6 @@ public class GameManager : MonoBehaviour
         LevelGenerationManager.instance.DestroyBoats();
         LevelGenerationManager.instance.StartLevelGeneration();
         _player.transform.position = _playerStartingPos;
-        distanceCover = 0;
         scoreText.text = "<b>" + 0 + "</b>m";
         waves._multiplier = startWavesMultiplier;
         mainLight.color = _startingLightColor;
@@ -120,10 +119,15 @@ public class GameManager : MonoBehaviour
         _FadeToDeathScreen();
     }
 
-    void _SaveHighscore()
+    public void SaveHighscore()
     {
+        highscore = distanceCover;
+        Debug.Log("Highscore : " + highscore);
+
         if (PlayerPrefs.GetInt("Highscore") < highscore)
             PlayerPrefs.SetInt("Highscore", (int)highscore);
+
+        distanceCover = 0;
     }
 
     void _LoadHighscore() 
