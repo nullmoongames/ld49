@@ -3473,7 +3473,7 @@ GameObject:
   - component: {fileID: 9082753498621308445}
   - component: {fileID: 8327433944142510913}
   m_Layer: 0
-  m_Name: Boat 02
+  m_Name: Boat Prop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3571,42 +3571,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5140781151191867851}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a9dce546b125fc343a8d88884825486f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boatProps:
-  - propVariant:
-    - {fileID: 7302162258992824483, guid: ae74aa401dc4ff344b09cdb0c61fac05, type: 3}
-    attachedToParent: 0
-    minimumChaosRequiredToSpawn: 33
-    maximumChaosRequiredToSpawn: 100
-  - propVariant:
-    - {fileID: 90060630273602444, guid: 8292c4b8d826dda4c86e3a2c1168907a, type: 3}
-    attachedToParent: 0
-    minimumChaosRequiredToSpawn: 0
-    maximumChaosRequiredToSpawn: 100
-  - propVariant:
-    - {fileID: 1052475958741873088, guid: 139574fae2dd72546b5e762f1959b989, type: 3}
-    attachedToParent: 0
-    minimumChaosRequiredToSpawn: 0
-    maximumChaosRequiredToSpawn: 100
-  - propVariant:
-    - {fileID: 2383336009937409156, guid: fbd0809a74fbaa840b43e606682ea083, type: 3}
-    attachedToParent: 0
-    minimumChaosRequiredToSpawn: 0
-    maximumChaosRequiredToSpawn: 100
-  - propVariant:
-    - {fileID: 1440033832554409499, guid: 7c9b9ae83602caf449fcdc861c0ea867, type: 3}
-    attachedToParent: 0
-    minimumChaosRequiredToSpawn: 20
-    maximumChaosRequiredToSpawn: 100
-  - propVariant:
-    - {fileID: 5533675669795933104, guid: 83415595f20662b48b12f050a81b5955, type: 3}
-    attachedToParent: 1
-    minimumChaosRequiredToSpawn: 0
-    maximumChaosRequiredToSpawn: 100
+  boatProps: []
   oceanProps:
   - propVariant:
     - {fileID: 8562865382295276885, guid: 4e800e40b6154214990013cdffc43d93, type: 3}
@@ -3640,12 +3610,12 @@ MonoBehaviour:
     maximumChaosRequiredToSpawn: 100
   - propVariant:
     - {fileID: 100000, guid: c63c77daacd0013499e2cf8f9c39edbc, type: 3}
-    attachedToParent: 1
+    attachedToParent: 0
     minimumChaosRequiredToSpawn: 0
     maximumChaosRequiredToSpawn: 66
   - propVariant:
     - {fileID: 100000, guid: e169bd13f37509046ae97d918a0a22fe, type: 3}
-    attachedToParent: 1
+    attachedToParent: 0
     minimumChaosRequiredToSpawn: 50
     maximumChaosRequiredToSpawn: 100
   boatPropSpawnPoints:

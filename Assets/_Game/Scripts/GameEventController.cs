@@ -20,25 +20,29 @@ public class GameEventController : MonoBehaviour
         Crest.BoatProbes _crestBoat = FindObjectOfType<Crest.BoatProbes>();
 
         if (_crestBoat != null)
-        {
-            _actualBoat = _crestBoat.transform;
-            _startingBoat = _actualBoat;
-        }
+            _startingBoat = _crestBoat.transform;
     }
     public void DeathEvent()
     {
         GameManager.instance.ReloadLevel();
-        ocean.enabled = false;
-        ocean.enabled = true;
+        ReloadOcean();
         //DEATH UI
         //TITTLE SCREEN
         //PLAY AGAIN
         //QUIT
     }
 
+    public void ReloadOcean()
+    {
+        ocean.enabled = false;
+        ocean.enabled = true;
+    }
+
     public void NewEntryBoat(Transform __newActualBot)
     {
-        Destroy(_actualBoat.gameObject, timeBeforeBoatPassedDestruction);
+        if(_actualBoat != null)
+            Destroy(_actualBoat.gameObject, timeBeforeBoatPassedDestruction);
+
         _actualBoat = __newActualBot;
         LevelGenerationManager.instance.NewSingleGeneration();
     }

@@ -5,6 +5,7 @@ using TMPro;
 using DG.Tweening;
 using Cinemachine;
 using THOR;
+using Crest;
 
 public class GameManager : MonoBehaviour
 {
@@ -26,6 +27,9 @@ public class GameManager : MonoBehaviour
     private float _startingLightIntensity;
     public Color chaosLightColor;
     private Color _startingLightColor;
+    public OceanWaveSpectrum waves;
+    public float startWavesMultiplier = 1f;
+    public float maxWavesMultiplier = 1.5f;
 
     //Reload Management
     private Transform _player;
@@ -47,6 +51,8 @@ public class GameManager : MonoBehaviour
         _playerStartingPos = _player.transform.position;
 
         _FadeToMainMenu();
+        scoreText.text = "<b>" + 0 + "</b>m";
+
     }
 
     private void Update()
@@ -64,6 +70,7 @@ public class GameManager : MonoBehaviour
         thunder.probability = (chaosPercent / 100);
         mainLight.intensity = (_startingLightIntensity - (chaosPercent / 100));
         mainLight.color = Color.Lerp(_startingLightColor, chaosLightColor, (chaosPercent / 100));
+        waves._multiplier = Mathf.Lerp(startWavesMultiplier, maxWavesMultiplier, (chaosPercent / 100));
     }
 
     public void ReloadLevel()
@@ -72,7 +79,12 @@ public class GameManager : MonoBehaviour
         LevelGenerationManager.instance.StartLevelGeneration();
         _player.transform.position = _playerStartingPos;
         distanceCover = 0;
-        //Reset water
+        scoreText.text = "<b>" + 0 + "</b>m";
+        waves._multiplier = startWavesMultiplier;
+        mainLight.color = _startingLightColor;
+        mainLight.intensity = _startingLightIntensity;
+        thunder.probability = 0;
+        chaosPercent = 0;
     }
 
     void _UpdatePlayerMeters() 
@@ -88,7 +100,7 @@ public class GameManager : MonoBehaviour
     void _UpdateChaosPercent()
     {
         if (chaosPercent < 100)
-            chaosPercent = (distanceCover / 50);
+            chaosPercent = (distanceCover / 25);
         else
             chaosPercent = 100;
     }

@@ -38,7 +38,7 @@ namespace Crest
         public float _smallWavelengthMultiplier = 1f;
 
         [Tooltip("Multiplier"), Range(0f, 10f), SerializeField]
-        float _multiplier = 1f;
+        public float _multiplier = 1f;
 
         [HideInInspector, SerializeField]
         float[] _powerLog = new float[NUM_OCTAVES]
