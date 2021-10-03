@@ -40,6 +40,8 @@ public class GameManager : MonoBehaviour
     //Instance
     public static GameManager instance;
 
+    private float _startingZPos;
+
     private void Awake()
     {
         instance = this;
@@ -48,6 +50,7 @@ public class GameManager : MonoBehaviour
         _startingLightIntensity = mainLight.intensity;
 
         _player = FindObjectOfType<PlayerController>().transform;
+        _startingZPos = _player.transform.position.z;
         _player.gameObject.SetActive(false);
         _playerStartingPos = _player.transform.position;
 
@@ -91,10 +94,10 @@ public class GameManager : MonoBehaviour
     void _UpdatePlayerMeters() 
     {
         //To be sure that the player meter do not decrease
-        if(distanceCover < (int)_player.transform.position.z) 
+        if(distanceCover < ((int)_player.transform.position.z - (int)_startingZPos)) 
         {
             scoreText.text = "<b>" + distanceCover + "</b>m";
-            distanceCover = (int)_player.transform.position.z;
+            distanceCover = (int)_player.transform.position.z - (int)_startingZPos;
         }
     }
 
