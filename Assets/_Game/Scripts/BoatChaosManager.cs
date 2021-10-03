@@ -51,8 +51,6 @@ public class BoatChaosManager : MonoBehaviour
         {
             float chance = Random.Range((GameManager.instance.chaosPercent / 100), 1);
 
-            Debug.Log("Chance : " + chance);
-
             if (chance < 0.20f)
                 return;
 
@@ -89,6 +87,7 @@ public class BoatChaosManager : MonoBehaviour
 
     public void Update()
     {
+        return;
         //DEBUG
         _fixedBoatRot = transform.eulerAngles;
 
@@ -101,13 +100,13 @@ public class BoatChaosManager : MonoBehaviour
 
         if(transform.rotation.x > rotationConsideringBoatIsBug.x) 
         {
-            Debug.Log("X is bug");
+            //Debug.Log("X is bug");
             _fixedBoatRot.x = 0;
         }
 
         if(transform.rotation.x < -rotationConsideringBoatIsBug.x)
         {
-            Debug.Log("-X is bug");
+            //Debug.Log("-X is bug");
             _fixedBoatRot.x = 0;
         }
 

@@ -25,10 +25,10 @@ public class SimpleFollow : MonoBehaviour
 
     void Update()
     {
-        //if(forceStartingPosSet)
-
-
-        _newPos = transform.position;
+        if (forceStartingPosSet)
+            _newPos = _startingPos;
+        else
+            _newPos = transform.position;
 
         if (x)
             _newPos.x = target.transform.position.x + offset.x;
