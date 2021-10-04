@@ -60,6 +60,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private AudioSource m_ouchAudioSource;
 
+    [Header("UI")]
+    [SerializeField]
+    private GameObject m_pauseUI;
+
     [HideInInspector]
     public PlayerInputActions m_inputActions;
 
@@ -67,10 +71,12 @@ public class PlayerController : MonoBehaviour
     private bool m_isGrounded;
     private float m_rigidbodyMass;
     private float forwardMultiplier = 1f;
+    private bool m_isGamePaused;
 
     private void Awake()
     {
         m_inputActions = new PlayerInputActions();
+        m_speedVFX.Stop();
     }
 
     private void OnEnable()
@@ -78,6 +84,7 @@ public class PlayerController : MonoBehaviour
         m_inputActions.Enable();
 
         m_inputActions.Gameplay.Jump.started += ctx => Jump();
+        m_inputActions.Gameplay.Pause.started += ctx => Pause();
         m_rigidbodyMass = m_rigidbody.mass;
 
         m_speedVFX.Stop();
@@ -203,7 +210,6 @@ public class PlayerController : MonoBehaviour
         forwardMultiplier = 10f;
         if (m_speedVFX.aliveParticleCount < 1)
             m_speedVFX.Play();
-        m_speedVFX.playRate = 3f;
 
         if (!m_speedBoostAudioSource.isPlaying)
         {
@@ -218,6 +224,26 @@ public class PlayerController : MonoBehaviour
     {
         m_speedVFX.Stop();
         forwardMultiplier = 1f;
+    }
+
+    public void Pause()
+    {
+        m_isGamePaused = !m_isGamePaused;
+        Debug.Log($"Pause: {m_isGamePaused}");
+
+        if(m_isGamePaused)
+        {
+            Time.timeScale = 0;
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        } else
+        {
+            Time.timeScale = 1;
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+        }
+
+        m_pauseUI.SetActive(m_isGamePaused);
     }
 
     #region DEBUG

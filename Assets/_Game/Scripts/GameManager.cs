@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     public int distanceCover = 0;
     public TMP_Text scoreText;
     public TMP_Text highscoreText;
+    public TMP_Text highscoreTextPause;
     private float highscore;
 
     [Header("UI Menu")]
@@ -64,7 +65,7 @@ public class GameManager : MonoBehaviour
 
         _player = FindObjectOfType<PlayerController>().transform;
         _startingZPos = _player.transform.position.z;
-        _player.gameObject.SetActive(false);
+        _player.parent.gameObject.SetActive(false);
         _playerStartingPos = _player.transform.position;
 
         audioSource = GetComponent<AudioSource>();
@@ -136,7 +137,7 @@ public class GameManager : MonoBehaviour
 
     void PlayIntro1()
     {
-        IntroVCam1.Priority = 10;
+        IntroVCam1.Priority = 100;
         Invoke("PlayIntro2", 4f);
     }
 
@@ -144,7 +145,7 @@ public class GameManager : MonoBehaviour
     {
         pirateRunnerIntro.SetActive(true);
         IntroVCam1.Priority = 0;
-        IntroVCam2.Priority = 10;
+        IntroVCam2.Priority = 100;
         Invoke("DoPlay", 4f);
     }
 
@@ -152,7 +153,7 @@ public class GameManager : MonoBehaviour
     {
         IntroVCam2.Priority = 0;
         pirateRunnerIntro.SetActive(false);
-        _player.gameObject.SetActive(true);
+        _player.parent.gameObject.SetActive(true);
         _gameIsPlaying = true;
     }
 
@@ -190,7 +191,8 @@ public class GameManager : MonoBehaviour
 
     void _LoadHighscore() 
     {
-        highscoreText.text = "Highscore : " + PlayerPrefs.GetInt("Highscore");
+        highscoreText.text = "Highscore: " + PlayerPrefs.GetInt("Highscore");
+        highscoreTextPause.text = "Highscore: " + PlayerPrefs.GetInt("Highscore");
     }
 
     void _FadeToGame() 
