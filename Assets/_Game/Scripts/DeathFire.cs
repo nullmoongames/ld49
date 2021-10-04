@@ -25,10 +25,7 @@ public class DeathFire : MonoBehaviour
     {
         if(other.CompareTag("Player"))
         {
-            Debug.Log("Dead");
-
-            // GameEventController.instance.DeathEvent();
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            GameEventController.instance.DeathEvent();
         }
     }
 }
